@@ -3,24 +3,192 @@ import type { DataResponse } from '../../types/data/DataResponse';
 import type { Technique } from '../../types/data/objectTypes/Technique';
 
 export const get: RequestHandler<
-	Record<string, any>,
-	Record<string, any>,
+	Record<string, string>,
+	Record<string, string>,
 	DataResponse<Technique>
 > = async () => {
 	return {
 		body: [
 			{
+				name: 'Pincher',
+				attack: 'Right headlock',
+				startIn: 'Right headlock',
+				class: 'Black Belt',
+				learnedDate: new Date('10/30/21'),
+				notes: [
+					'Right grab right and loosen grip',
+					'Left pinch right inner thigh',
+					'Left snake behind right arm',
+					'Left step-through to 1:30',
+					'Left pin right arm',
+					'Right inverted roundhouse punch to face'
+				]
+			},
+			{
+				name: 'Retreating Pendulum',
+				attack: 'Rear crossover right side kick',
+				startIn: 'Right neutral bow',
+				class: 'Black Belt',
+				learnedDate: new Date('10/23/21'),
+				notes: [
+					'Step to 6 left front twist, right frictional pull block to right leg',
+					'Continue circles, right side kick to left knee, right hammering forearm to right collarbone',
+					'Left drag to 12, right inward elbow to face',
+					'Right rear scoop, right buckle'
+				]
+			},
+			{
+				name: 'Capturing the Rod',
+				attack: 'Right straight gun',
+				startIn: 'Natural stance',
+				class: 'Black Belt',
+				learnedDate: new Date('10/23/21'),
+				notes: [
+					'Left open hand extended outward block to right, grab gun',
+					'Step to 12 right neutral bow, right finger slice to eyes, grab right wrist',
+					'Right reverse step-through to 6',
+					'Right front kick to solar plexus',
+					'Right grab gun, hammering gun to spine',
+					'Right lifting gun to face'
+				]
+			},
+			{
+				name: 'Twisted Rod',
+				attack: 'Right straight gun',
+				startIn: 'Natural stance',
+				class: 'Black Belt',
+				learnedDate: new Date('10/23/21'),
+				notes: [
+					'Step to 12 left neutral bow, left grab wrist, right grab gun',
+					'Left gun thrust to eyes',
+					'Right step-through to 12 behind them',
+					'Take down to 7:30',
+					'Right knee pin to left shoulder',
+					'Right fingerspear to eyes',
+					'Right take gun, outward strike to face, inward strike to face',
+					'Clear right arm with right foot'
+				]
+			},
+			{
+				name: 'Defying the Rod',
+				attack: 'Right straight gun',
+				startIn: 'Natural stance',
+				class: 'Black Belt',
+				learnedDate: new Date('10/22/21'),
+				notes: [
+					'Right front kick to groin, right fingerspear to eyes, left open hand extended outward block grab gun',
+					'Frictional pull block to right elbow',
+					'Right inward elbow to face',
+					'Right grab right armpit',
+					'Step to 4:30 left neutral bow',
+					'Right grab and twist gun',
+					'Right hammering gun to head',
+					'Right continue the circle hammering gun to spine',
+					'Right knee to solar plexus'
+				]
+			},
+			{
+				name: 'Broken Rod',
+				attack: 'Right gun to back',
+				startIn: 'Natural stance',
+				class: 'Black Belt',
+				learnedDate: new Date('10/5/21'),
+				notes: [
+					'Put hands up, glance over left shoulder',
+					'Step to 1:30 left neutral bow, right grab right wrist',
+					'Left step-through to 7:30, left uppercut to right elbow',
+					'Left hammerfist to groin',
+					'Left inward forearm to right elbow',
+					'Left grab right wrist, right grab gun',
+					'Right step-through to 7:30, right rip gun from right hand',
+					'Upward slice chin with gun',
+					'Downward hammer to solar plexus with gun barrel'
+				]
+			},
+			{
+				name: 'Reprimanding the Bears',
+				attack: 'Bear hug from 6, arms pinned, right straight punch from 12',
+				startIn: 'Natural strance',
+				class: 'Black Belt',
+				learnedDate: new Date('9/18/21'),
+				notes: [
+					'Step to 9 horse stance, pin arms with left hand, right outward parry',
+					'Right front kick to groin',
+					'Right buckle left behind',
+					'Right back hammerfist to groin behind',
+					'Right grab neck and right knee to face behind, land in front twist',
+					'Left side kick to groin front',
+					'Rear twist to 12, left outweard back-knuckle to face front',
+					'Right front kick to behind',
+					'Left back kick to front'
+				]
+			},
+			{
+				name: 'Piercing Lance',
+				attack: 'Low right knife thrust',
+				startIn: 'Natural stance with hands up facing self',
+				class: 'Black Belt',
+				learnedDate: new Date('7/27/21'),
+				notes: [
+					'Left neutral bow to 12, right downward parry',
+					'Left grab right wrist, wrap elbow to elbow',
+					'Right reverse step-through to 12, right back elbow to spine',
+					'Right grab right wrist',
+					'Right step to 9, left outward handsword to neck',
+					'Left grab face',
+					'Right reverse shuffle to 9, drop right elbow on left knee',
+					'Both hands grab right hand',
+					'Left reverse step-through to 9',
+					'Outward strike to face with knife',
+					'Left hand switch grip, brace elbow against knee',
+					'Right heelpalm to elbow (they roll over)',
+					'Pin with right knee'
+				]
+			},
+			{
+				name: 'Heavenly Ascent',
+				attack: 'Front two-hand choke',
+				startIn: 'Natural stance',
+				class: 'Black Belt',
+				learnedDate: new Date('7/13/21'),
+				notes: [
+					'Right step to 12 neutral bow, clasp hands and lift',
+					'Right back-knuckle to face',
+					'Left hammering claw to face',
+					'Right half-fist to neck'
+				]
+			},
+			{
+				name: 'Squeezing the Peach',
+				attack: 'Bear hug from 6, arms pinned',
+				startIn: 'Natural stance',
+				class: 'Black Belt',
+				learnedDate: new Date('8/14/21'),
+				notes: [
+					'Left cat stance, left grab groin, right pin arms',
+					'Step to 12 concave stance, left pin arms',
+					'Right leg back scoop',
+					'Right back buckle, right obscure back elbow'
+				]
+			},
+			{
 				name: 'Snaking Talon',
 				attack: 'Left straight punch, right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt',
-				learnedDate: null,
-				notes: ['Right inward parry', 'Right outward parry']
+				learnedDate: new Date('10/9/21'),
+				notes: [
+					'Step to 6 right neutral bow, right inward parry',
+					'Right open hand extended outward block, grab right',
+					'Right front kick',
+					'Right pull to left',
+					'Left rear scoop, right back kick'
+				]
 			},
 			{
 				name: 'Begging hands',
 				attack: 'Two hand straight wrist grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -33,7 +201,7 @@ export const get: RequestHandler<
 			{
 				name: 'Brushing the storm',
 				attack: 'Right overhead club from 3',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -48,7 +216,7 @@ export const get: RequestHandler<
 			{
 				name: 'Buckling branch',
 				attack: 'Left front kick',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -60,7 +228,7 @@ export const get: RequestHandler<
 			{
 				name: 'Calming the storm',
 				attack: 'Right roundhouse club',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -72,7 +240,7 @@ export const get: RequestHandler<
 			{
 				name: 'Capturing the storm',
 				attack: 'Right overhead club',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -85,7 +253,7 @@ export const get: RequestHandler<
 			{
 				name: 'Circles of protection',
 				attack: 'Right looping roundhouse punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -98,7 +266,7 @@ export const get: RequestHandler<
 			{
 				name: 'Circling the horizon',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: []
@@ -106,7 +274,7 @@ export const get: RequestHandler<
 			{
 				name: 'Circling wing',
 				attack: 'Two hand choke from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -120,7 +288,7 @@ export const get: RequestHandler<
 			{
 				name: 'Clutching feathers',
 				attack: 'Straight right lapel grab / hair grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Unknown',
 				learnedDate: null,
 				notes: []
@@ -128,7 +296,7 @@ export const get: RequestHandler<
 			{
 				name: 'Conquering shield',
 				attack: 'Straight right lapel grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -140,7 +308,7 @@ export const get: RequestHandler<
 			{
 				name: 'Crashing wings',
 				attack: 'Low bear hug from 6, arms free',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -154,7 +322,7 @@ export const get: RequestHandler<
 			{
 				name: 'Cross of death',
 				attack: 'Cross choke from 12',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -168,7 +336,7 @@ export const get: RequestHandler<
 			{
 				name: 'Crossed twigs',
 				attack: 'Two hand wrist grab from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -182,7 +350,7 @@ export const get: RequestHandler<
 			{
 				name: 'Crossing talon',
 				attack: 'Right wrist cross grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -211,7 +379,7 @@ export const get: RequestHandler<
 			{
 				name: 'Dance of death',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: new Date('03/28/2021'),
 				notes: []
@@ -219,7 +387,7 @@ export const get: RequestHandler<
 			{
 				name: 'Defensive cross',
 				attack: 'Right front kick',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -232,7 +400,7 @@ export const get: RequestHandler<
 			{
 				name: 'Defying the storm',
 				attack: 'Right roundhouse club',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -245,11 +413,11 @@ export const get: RequestHandler<
 			{
 				name: 'Delayed sword',
 				attack: 'Straight left lapel grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt',
-				learnedDate: null,
+				learnedDate: new Date('9/11/21'),
 				notes: [
-					'Right inward block to right arm, left leg step to 6',
+					'Step to 6 right neutral bow, right inward block to right arm',
 					'Right front kick to groin',
 					'Right outward handsword to neck'
 				]
@@ -257,7 +425,7 @@ export const get: RequestHandler<
 			{
 				name: 'Desperate falcons',
 				attack: 'Two hand straight wrist grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -273,7 +441,7 @@ export const get: RequestHandler<
 			{
 				name: 'Destructive fans',
 				attack: 'Right straight punch from 9',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -288,7 +456,7 @@ export const get: RequestHandler<
 			{
 				name: 'Destructive kneel',
 				attack: 'Deep right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -301,7 +469,7 @@ export const get: RequestHandler<
 			{
 				name: 'Destructive twins',
 				attack: 'Two-hand choke from 12',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -316,7 +484,7 @@ export const get: RequestHandler<
 			{
 				name: 'Dominating circles',
 				attack: 'Right cross shoulder grab, offset to 3',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: []
@@ -324,7 +492,7 @@ export const get: RequestHandler<
 			{
 				name: 'Evading the storm',
 				attack: 'Right overhead club',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -338,7 +506,7 @@ export const get: RequestHandler<
 			{
 				name: 'Falcons of force',
 				attack: 'Two person shoulder grab from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Unknown',
 				learnedDate: null,
 				notes: [
@@ -352,7 +520,7 @@ export const get: RequestHandler<
 			{
 				name: 'Falling falcon',
 				attack: 'Left straight lapel grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -367,7 +535,7 @@ export const get: RequestHandler<
 			{
 				name: 'Five swords',
 				attack: 'Right roundhouse punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -381,7 +549,7 @@ export const get: RequestHandler<
 			{
 				name: 'Flashing wings',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -395,7 +563,7 @@ export const get: RequestHandler<
 			{
 				name: 'Flight to freedom',
 				attack: 'Denied right hammerlock from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -408,7 +576,7 @@ export const get: RequestHandler<
 			{
 				name: 'Glancing spear',
 				attack: 'Straight left wrist grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -425,7 +593,7 @@ export const get: RequestHandler<
 			{
 				name: 'Grip of death',
 				attack: 'Attempted right headlock from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -438,7 +606,7 @@ export const get: RequestHandler<
 			{
 				name: 'Gripping talon',
 				attack: 'Straight right wrist grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -451,7 +619,7 @@ export const get: RequestHandler<
 			{
 				name: 'Leap of death',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -468,7 +636,7 @@ export const get: RequestHandler<
 			{
 				name: 'Leaping crane',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -481,7 +649,7 @@ export const get: RequestHandler<
 			{
 				name: 'Locked wing',
 				attack: 'Right hammerlock from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -500,13 +668,17 @@ export const get: RequestHandler<
 				notes: [
 					'Right lifting reverse handsword to groin, left pushdown block to right thigh, right leg step to 12',
 					'Right obscured upward elbow to chin',
-					'Right inward elbow to left jaw, left inward horizontal heelpalm to right jaw'
+					'Right inward elbow to left jaw, left inward horizontal heelpalm to right jaw',
+					'Extension',
+					'Step to left front twist, hammerfist to groin',
+					'Full right stomp to right foot',
+					'Full left stomp to left foot'
 				]
 			},
 			{
 				name: 'Mace of aggression',
 				attack: 'Two hand lapel grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Unknown',
 				learnedDate: null,
 				notes: [
@@ -517,7 +689,7 @@ export const get: RequestHandler<
 			{
 				name: 'Obstructing the storm',
 				attack: 'Right overhead club',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: []
@@ -525,11 +697,11 @@ export const get: RequestHandler<
 			{
 				name: 'Parting wings',
 				attack: 'Attempted two-hand shove from 12',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
-					'Right open palm extended outward block to left arm, left open palm extended outward block to right arm, right leg step to 6',
+					'Right open hand extended outward block to left arm, left open hand extended outward block to right arm, right leg step to 6',
 					'Right punching chop to left ribs, left cover to own right shoulder',
 					'Left outward handsword to neck',
 					'Right middle knuckle to solar plexus, left pull down arms'
@@ -538,12 +710,12 @@ export const get: RequestHandler<
 			{
 				name: 'Protecting fans',
 				attack: 'Left straight punch, right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
 					'Left inward parry to left arm, left leg step to 10:30',
-					'Right open palm extended outward block to right arm',
+					'Right open hand extended outward block to right arm',
 					'Right grab right wrist, left two-finger poke to eyes, right front kick to groin',
 					'Right inward elbow to solar plexus, left grab right arm',
 					'Right outward slice to eyes, right front scoop kick to groin',
@@ -553,7 +725,7 @@ export const get: RequestHandler<
 			{
 				name: 'Raining claw',
 				attack: 'Right uppercut',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -565,7 +737,7 @@ export const get: RequestHandler<
 			{
 				name: 'Raking mace',
 				attack: 'Two hand lapel grab',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -578,19 +750,28 @@ export const get: RequestHandler<
 			{
 				name: 'Repeating mace',
 				attack: 'Attempted left center push',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
 					"Left waiter's hand to left wrist, left leg step to 3",
 					'Right middle knuckle to left ribs and outward back-knuckle to left ribs',
-					'Right looping overhead kick to left knee'
+					'Right looping overhead kick to left knee',
+					'Extension',
+					'Right outward back-knuckle to face',
+					'Left thrusting sweep kick to left leg, land in front twist',
+					'Unwind left heelpalm to face',
+					'Right spinning back kick to groin',
+					'Right buckle left leg',
+					'Right stomp right knee',
+					'Left rear cross stomp to groin',
+					'Right stomp right ankle'
 				]
 			},
 			{
 				name: 'Returning storm',
 				attack: 'Right roundhouse club, right backhand club',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -615,7 +796,7 @@ export const get: RequestHandler<
 			{
 				name: 'Scraping hoof',
 				attack: 'Attempted full nelson',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -627,7 +808,7 @@ export const get: RequestHandler<
 			{
 				name: 'Shield and mace',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Unknown',
 				learnedDate: null,
 				notes: [
@@ -640,7 +821,7 @@ export const get: RequestHandler<
 			{
 				name: 'Shielding hammer',
 				attack: 'Left hooking punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: []
@@ -648,7 +829,7 @@ export const get: RequestHandler<
 			{
 				name: 'Sleeper',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -662,7 +843,7 @@ export const get: RequestHandler<
 			{
 				name: 'Snapping twig',
 				attack: 'Left straight center push',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: new Date('02/13/2021'),
 				notes: []
@@ -670,7 +851,7 @@ export const get: RequestHandler<
 			{
 				name: 'Spiraling twig',
 				attack: 'High bear hug from 6, arms free',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -686,7 +867,7 @@ export const get: RequestHandler<
 			{
 				name: "Striking serpent's head",
 				attack: 'Bear hug from 12, arms free',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -705,7 +886,7 @@ export const get: RequestHandler<
 			{
 				name: 'The backbreaker',
 				attack: 'Right straight punch from 3',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -726,7 +907,7 @@ export const get: RequestHandler<
 			{
 				name: 'Thrusting prongs',
 				attack: 'Bear hug from 12, arms pinned',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -739,7 +920,7 @@ export const get: RequestHandler<
 			{
 				name: 'Thrusting salute',
 				attack: 'Right front kick',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -751,7 +932,7 @@ export const get: RequestHandler<
 			{
 				name: 'Thrusting wedge',
 				attack: 'Attempted two hand choke from 12',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
 				notes: [
@@ -764,7 +945,7 @@ export const get: RequestHandler<
 			{
 				name: 'Thundering hammers',
 				attack: 'Right straight punch',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
 				notes: [
@@ -777,7 +958,7 @@ export const get: RequestHandler<
 			{
 				name: 'Triggered salute',
 				attack: 'Straight left shoulder shove',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: []
@@ -785,7 +966,7 @@ export const get: RequestHandler<
 			{
 				name: 'Twirling wings',
 				attack: 'Two hand shoulder grab from behind',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [
@@ -804,7 +985,7 @@ export const get: RequestHandler<
 			{
 				name: 'Wings of silk',
 				attack: 'Upper arms held from behind (yoke grab)',
-				startIn: 'Natural stance with arms free',
+				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
 				notes: [

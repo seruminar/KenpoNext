@@ -1,6 +1,13 @@
-import { writable } from 'svelte/store';
+import { Subscriber, Unsubscriber, writable } from 'svelte/store';
 
-export const localStorage = <T>(key: string, defaultValue?: T) => {
+export const localStorage: <T>(
+	key: string,
+	defaultValue?: T
+) => {
+	subscribe: (this: void, run: Subscriber<T>) => Unsubscriber;
+	set: (value: T) => void;
+	update: (updater: (value: T) => T) => void;
+} = <T>(key: string, defaultValue?: T) => {
 	if (typeof window !== 'undefined') {
 		if (defaultValue === undefined || window.localStorage.getItem(key) !== null) {
 			defaultValue = JSON.parse(window.localStorage.getItem(key));

@@ -8,30 +8,6 @@
 	let showOptions: boolean = false;
 	let selectFocused: boolean = false;
 
-	// $: if (
-	// 	!selectFocused &&
-	// 	(value.length === 0 || value.length === options.length) &&
-	// 	filterValue === ''
-	// ) {
-	// 	filteredOptions = options;
-	// 	value = [];
-	// } else if (!selectFocused && oldFilterValue !== filterValue) {
-	// 	const newFilteredOptions = [];
-
-	// 	const matches = (value: string) => value.match(new RegExp(filterValue, 'gi'));
-
-	// 	for (const option of options) {
-	// 		if (matches(option)) {
-	// 			newFilteredOptions.push(option);
-	// 			continue;
-	// 		}
-	// 	}
-
-	// 	filteredOptions = newFilteredOptions;
-	// 	value = newFilteredOptions;
-	// 	oldFilterValue = filterValue;
-	// }
-
 	$: if (filterValue === '' && showOptions && !selectFocused && filterValue !== oldFilterValue) {
 		filteredOptions = options;
 		value = [];
@@ -113,9 +89,6 @@
 				left: 0;
 				width: 100%;
 				display: flex;
-
-				select {
-				}
 			}
 		}
 	}

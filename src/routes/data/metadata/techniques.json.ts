@@ -3,8 +3,8 @@ import type { Technique } from '../../../types/data/objectTypes/Technique';
 import type { MetadataResponse } from '../../../types/data/MetadataResponse';
 
 export const get: RequestHandler<
-	Record<string, any>,
-	Record<string, any>,
+	Record<string, string>,
+	Record<string, string>,
 	MetadataResponse<Technique>
 > = async () => {
 	return {
