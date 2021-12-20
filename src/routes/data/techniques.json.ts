@@ -10,6 +10,155 @@ export const get: RequestHandler<
 	return {
 		body: [
 			{
+				name: 'Mace of Aggression',
+				attack: 'Right hair grab',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/14/21'),
+				notes: [
+					'Step to 6 right neutral bow, right vertical punch to armpit, left pin right hand',
+					'Right outward block to right arm',
+					'Right inward elbow to right jaw, left inward horizontal heelpalm to left jaw'
+				]
+			},
+			{
+				name: 'Aggressive Twins',
+				attack: 'Low bear hug from 12, arms pinned',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/14/21'),
+				notes: [
+					'Step to 9 horse stance, right hammerfist to groin, left check hands',
+					'Step to 3 right cat, right outward elbow to solar plexus',
+					'Right stomp to left foot',
+					'Step to 3 horse stance, right vertical obscure elbow to chin'
+				]
+			},
+			{
+				name: 'Gift of Destruction',
+				attack: 'Right handshake',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/14/21'),
+				notes: [
+					'Step to 11 right knee to groin, left upward heelpalm to right elbow',
+					'Right inward elbow, left check right arm'
+				]
+			},
+			{
+				name: 'Glancing Salute',
+				attack: 'Right cross shoulder shove',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/14/21'),
+				notes: [
+					'Step to 12 left neutral bow, right pin right, left inward block to right elbow',
+					'Right heelpalm to chin, left check right upper arm',
+					'Right grab neck',
+					'Right knee to solar plexus, right inward elbow to face'
+				]
+			},
+			{
+				name: 'Lone Kimono',
+				attack: 'Straight right lapel grab',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/14/21'),
+				notes: [
+					'Step to 6 right neutral bow',
+					'Right upward block to left elbow, left pin right wrist and twist',
+					'Right inward block to left elbow',
+					'Right outward handsword to neck'
+				]
+			},
+			{
+				name: 'Checking the Storm',
+				attack: 'Right overhead club',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 3 left cat, right inward parry, left extended outward open palm block',
+					'Left ball kick to groin',
+					'Right knife-edge kick to right knee',
+					'Right outward back-knuckle to face'
+				]
+			},
+			{
+				name: 'Deflecting Hammer',
+				attack: 'Right ball kick to groin',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 7:30 right neutral bow',
+					'Right downward block to right leg',
+					'Right shuffle to 1:30, right inward elbow to face, left check right shoulder'
+				]
+			},
+			{
+				name: 'Grasp of Death',
+				attack: 'Right headlock from 6',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 10:30 right close kneel, right grab right, head pinch left',
+					'Left horse pinch groin',
+					'V-step to 12, right snake and grab right wrist, left inward block to upper arm',
+					'Right staright punch to face'
+				]
+			},
+			{
+				name: 'Sword and hammer',
+				attack: 'Right shoulder grab from 3',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 2 right neutral bow, right rising obscure outward handsword to chin, left pin left',
+					'Right hammerfist to groin'
+				]
+			},
+			{
+				name: 'Attacking Mace',
+				attack: 'Right straight punch',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 6 left netural bow, left inward block to right arm',
+					'Left forward bow, right straight punch to solar plexus',
+					'Right clockwise wave grab right arm',
+					'Right step-through roundhouse kick to groin',
+					'Right forward bow, left vertical punch to ribs'
+				]
+			},
+			{
+				name: 'Sword of Destruction',
+				attack: 'Left roundhouse punch to face',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 7 right neutral bow, right extended outward block to left arm',
+					'Right ball kick to groin',
+					'Right inward handsword to neck'
+				]
+			},
+			{
+				name: 'Alternating Maces',
+				attack: 'Low two-hand shove',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/4/21'),
+				notes: [
+					'Step to 6 right neutral bow, right low inward block to arms',
+					'Right forward bow, left straight punch to solar plexus',
+					'Right outward back-knuckle to face, left pushdown block to arms'
+				]
+			},
+			{
 				name: 'Pincher',
 				attack: 'Right headlock',
 				startIn: 'Right headlock',
@@ -46,10 +195,10 @@ export const get: RequestHandler<
 				notes: [
 					'Left open hand extended outward block to right, grab gun',
 					'Step to 12 right neutral bow, right finger slice to eyes, grab right wrist',
+					'Right forward bow, poke eyes with barrel',
 					'Right reverse step-through to 6',
-					'Right front kick to solar plexus',
-					'Right grab gun, hammering gun to spine',
-					'Right lifting gun to face'
+					'Right front kick to solar plexus, pull gun to left',
+					'Left check right arm, right grab gun, lifting gun to face'
 				]
 			},
 			{
@@ -63,6 +212,7 @@ export const get: RequestHandler<
 					'Left gun thrust to eyes',
 					'Right step-through to 12 behind them',
 					'Take down to 7:30',
+					'Right stomp to left collarbone',
 					'Right knee pin to left shoulder',
 					'Right fingerspear to eyes',
 					'Right take gun, outward strike to face, inward strike to face',
@@ -664,10 +814,10 @@ export const get: RequestHandler<
 				attack: 'Guillotine choke from 12',
 				startIn: 'Bent at the waist',
 				class: 'Black Belt prep',
-				learnedDate: null,
+				learnedDate: new Date('12/14/21'),
 				notes: [
-					'Right lifting reverse handsword to groin, left pushdown block to right thigh, right leg step to 12',
-					'Right obscured upward elbow to chin',
+					'Step to 12 right neutral bow, right ridgehand to groin, left outward handsword to right knee',
+					'Right vertical obscure upward elbow to chin',
 					'Right inward elbow to left jaw, left inward horizontal heelpalm to right jaw',
 					'Extension',
 					'Step to left front twist, hammerfist to groin',
