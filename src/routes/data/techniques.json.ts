@@ -2,6 +2,22 @@ import type { RequestHandler } from '@sveltejs/kit';
 import type { DataResponse } from '../../types/data/DataResponse';
 import type { Technique } from '../../types/data/objectTypes/Technique';
 
+/*
+
+{
+  name: '',
+  attack: '',
+  startIn: 'Natural stance',
+  class: 'West LA',
+  learnedDate: new Date('12/23/21'),
+  notes: [
+    '',
+    '',
+    ''
+  ]
+},
+
+*/
 export const get: RequestHandler<
 	Record<string, string>,
 	Record<string, string>,
@@ -10,8 +26,104 @@ export const get: RequestHandler<
 	return {
 		body: [
 			{
+				name: 'Shielding Hammer (extension)',
+				attack: 'Right roundhouse punch to face',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/23/21'),
+				notes: [
+					'Step to 5 right neutral bow, right extended outward block to right lower arm',
+					'Right hammerfist to face',
+					'Right outward elbow to solar plexus',
+					'Step to 12 left front twist, right check left iliac crest, left vertical punch to solar plexus',
+					'Unwind right upward claw to face, left check left iliac crest',
+					'Right back kick to groin',
+					'Left back kick to groin'
+				]
+			},
+			{
+				name: 'Thrusting Salute (extension)',
+				attack: 'Right ball kick to groin',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/23/21'),
+				notes: [
+					'Step to 4:30 left neutral bow, left downward block to right leg',
+					'Right ball kick to groin',
+					'Right heelpalm to chin',
+					'Step to 10:30 left front twist, right check left arm, left vertical punch to solar plexus',
+					'Unwind left inward elbow to solar plexus',
+					'Left forward bow to 10:30, right hammerfist to left iliac crest',
+					'Right inward back-knuckle to face, left check left shoulder',
+					'Left neutral bow, left inward back-knuckle to face, right check right shoulder'
+				]
+			},
+			{
+				name: 'Evading the Storm (extension)',
+				attack: 'Right overhead club to face',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/23/21'),
+				notes: [
+					'Step to 9 left forward bow, right upward block to right upper arm',
+					'Right grab right wrist',
+					'Right roundhouse kick to solar plexus',
+					'Step to 10:30 left front twist, left knee to right knee',
+					'Right knee to right knee',
+					'Step to 1:30 left front twist, left inward block to right upper arm',
+					'Step to 1:30 right neutral bow',
+					'Left grab right hand',
+					'Right grab right hand',
+					'Pull to 6 and over to takedown',
+					'Right roundhouse kick to solar plexus'
+				]
+			},
+			{
+				name: 'Glancing Salute (extension)',
+				attack: 'Right cross shoulder shove',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/23/21'),
+				notes: [
+					'Step to 12 left neutral bow, right pin right hand, left inward block to right elbow',
+					'Right heelpalm to chin, left check right upper arm',
+					'Right grab neck',
+					'Step-through to 12 right knee to solar plexus, right inward elbow to face',
+					'Step to 1:30 right rear twist, right hammerfist to groin, left heelpalm to face',
+					'Right buckle left leg',
+					'Step to 7:30 right front twist, right outward back-knuckle to face',
+					'Left two-finger poke right eye, right outward back-knuckle to face'
+				]
+			},
+			{
+				name: 'Lone Kimono (extension)',
+				attack: 'Left straight lapel grab',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/23/21'),
+				notes: [
+					'Step to 6 right neutral bow, right upward block to left elbow',
+					'Step to 5 right neutral bow, right downward hammerfist to groin',
+					'Right forward bow, right outward extended block to left elbow, left heelpalm to face',
+					'Drag-step to 12 right knife-edge kick to right knee, right inward handsword to neck'
+				]
+			},
+			{
 				name: 'Mace of Aggression',
-				attack: 'Right hair grab',
+				attack: 'Two hand lapel grab',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('12/23/21'),
+				notes: [
+					'Step to 12 right neutral bow, right vertical punch to face, left pin right and left hands',
+					'Right inward block to right and left arm',
+					'Right inward elbow to face',
+					'Right outward elbow to face'
+				]
+			},
+			{
+				name: 'Clutching Feathers',
+				attack: 'Left straight hair grab',
 				startIn: 'Natural stance',
 				class: 'West LA',
 				learnedDate: new Date('12/14/21'),
@@ -28,7 +140,7 @@ export const get: RequestHandler<
 				class: 'West LA',
 				learnedDate: new Date('12/14/21'),
 				notes: [
-					'Step to 9 horse stance, right hammerfist to groin, left check hands',
+					'Step to 9 horse stance, right hammerfist to groin, left pin hands',
 					'Step to 3 right cat, right outward elbow to solar plexus',
 					'Right stomp to left foot',
 					'Step to 3 horse stance, right vertical obscure elbow to chin'
@@ -52,21 +164,20 @@ export const get: RequestHandler<
 				class: 'West LA',
 				learnedDate: new Date('12/14/21'),
 				notes: [
-					'Step to 12 left neutral bow, right pin right, left inward block to right elbow',
+					'Step to 12 left neutral bow, right pin right hand, left inward block to right elbow',
 					'Right heelpalm to chin, left check right upper arm',
 					'Right grab neck',
-					'Right knee to solar plexus, right inward elbow to face'
+					'Step-through to 12 right knee to solar plexus, right inward elbow to face'
 				]
 			},
 			{
 				name: 'Lone Kimono',
-				attack: 'Straight right lapel grab',
+				attack: 'Right straight lapel grab',
 				startIn: 'Natural stance',
 				class: 'West LA',
 				learnedDate: new Date('12/14/21'),
 				notes: [
-					'Step to 6 right neutral bow',
-					'Right upward block to left elbow, left pin right wrist and twist',
+					'Step to 6 right neutral bow, right upward block to left elbow, left pin right wrist and twist',
 					'Right inward block to left elbow',
 					'Right outward handsword to neck'
 				]
@@ -110,7 +221,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Sword and hammer',
+				name: 'Sword and Hammer',
 				attack: 'Right shoulder grab from 3',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -436,16 +547,8 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Clutching feathers',
-				attack: 'Straight right lapel grab / hair grab',
-				startIn: 'Natural stance',
-				class: 'Unknown',
-				learnedDate: null,
-				notes: []
-			},
-			{
 				name: 'Conquering shield',
-				attack: 'Straight right lapel grab',
+				attack: 'Right straight lapel grab',
 				startIn: 'Natural stance',
 				class: 'Intermediate',
 				learnedDate: null,
@@ -562,7 +665,7 @@ export const get: RequestHandler<
 			},
 			{
 				name: 'Delayed sword',
-				attack: 'Straight left lapel grab',
+				attack: 'Left straight lapel grab',
 				startIn: 'Natural stance',
 				class: 'Black Belt',
 				learnedDate: new Date('9/11/21'),
@@ -668,7 +771,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Falling falcon',
+				name: 'Falling Falcon',
 				attack: 'Left straight lapel grab',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
@@ -683,7 +786,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Five swords',
+				name: 'Five Swords',
 				attack: 'Right roundhouse punch',
 				startIn: 'Natural stance',
 				class: 'Intermediate',
@@ -697,7 +800,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Flashing wings',
+				name: 'Flashing Wings',
 				attack: 'Right straight punch',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
@@ -711,7 +814,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Flight to freedom',
+				name: 'Flight to Freedom',
 				attack: 'Denied right hammerlock from behind',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
@@ -724,8 +827,8 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Glancing spear',
-				attack: 'Straight left wrist grab',
+				name: 'Glancing Spear',
+				attack: 'Left straight wrist grab',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
@@ -741,7 +844,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Grip of death',
+				name: 'Grip of Death',
 				attack: 'Attempted right headlock from behind',
 				startIn: 'Natural stance',
 				class: 'Intermediate',
@@ -754,8 +857,8 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Gripping talon',
-				attack: 'Straight right wrist grab',
+				name: 'Gripping Talon',
+				attack: 'Right straight wrist grab',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
 				learnedDate: null,
@@ -767,7 +870,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Leap of death',
+				name: 'Leap of Death',
 				attack: 'Right straight punch',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
@@ -784,7 +887,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Leaping crane',
+				name: 'Leaping Crane',
 				attack: 'Right straight punch',
 				startIn: 'Natural stance',
 				class: 'Intermediate',
@@ -797,7 +900,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Locked wing',
+				name: 'Locked Wing',
 				attack: 'Right hammerlock from behind',
 				startIn: 'Natural stance',
 				class: 'Beginner',
@@ -810,7 +913,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Locking horns',
+				name: 'Locking Horns',
 				attack: 'Guillotine choke from 12',
 				startIn: 'Bent at the waist',
 				class: 'Black Belt prep',
@@ -826,18 +929,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Mace of aggression',
-				attack: 'Two hand lapel grab',
-				startIn: 'Natural stance',
-				class: 'Unknown',
-				learnedDate: null,
-				notes: [
-					'Right hammerfist to face, left pin right hand and left hand, right leg step to 12',
-					'Right outward elbow to solar plexus'
-				]
-			},
-			{
-				name: 'Obstructing the storm',
+				name: 'Obstructing the Storm',
 				attack: 'Right overhead club',
 				startIn: 'Natural stance',
 				class: 'Intermediate',
@@ -845,7 +937,7 @@ export const get: RequestHandler<
 				notes: []
 			},
 			{
-				name: 'Parting wings',
+				name: 'Parting Wings',
 				attack: 'Attempted two-hand shove from 12',
 				startIn: 'Natural stance',
 				class: 'Intermediate',
@@ -858,7 +950,7 @@ export const get: RequestHandler<
 				]
 			},
 			{
-				name: 'Protecting fans',
+				name: 'Protecting Fans',
 				attack: 'Left straight punch, right straight punch',
 				startIn: 'Natural stance',
 				class: 'Black Belt prep',
@@ -1107,7 +1199,7 @@ export const get: RequestHandler<
 			},
 			{
 				name: 'Triggered salute',
-				attack: 'Straight left shoulder shove',
+				attack: 'Left straight shoulder shove',
 				startIn: 'Natural stance',
 				class: 'Beginner',
 				learnedDate: null,
