@@ -1,4 +1,4 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from '@sveltejs/kit/';
 import type { DataResponse } from '../../types/data/DataResponse';
 import type { Technique } from '../../types/data/objectTypes/Technique';
 
@@ -18,11 +18,7 @@ import type { Technique } from '../../types/data/objectTypes/Technique';
 },
 
 */
-export const get: RequestHandler<
-	Record<string, string>,
-	Record<string, string>,
-	DataResponse<Technique>
-> = async () => {
+export const get: RequestHandler<DataResponse<Technique>> = async () => {
 	return {
 		body: [
 			{

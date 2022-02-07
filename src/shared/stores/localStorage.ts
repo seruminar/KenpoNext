@@ -1,4 +1,6 @@
-import { Subscriber, Unsubscriber, writable } from 'svelte/store';
+import { writable } from 'svelte/store';
+
+import type { Subscriber, Unsubscriber } from 'svelte/store';
 
 export const localStorage: <T>(
 	key: string,
