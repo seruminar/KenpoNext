@@ -9,7 +9,7 @@ import type { Technique } from '../../types/data/objectTypes/Technique';
   attack: '',
   startIn: 'Natural stance',
   class: 'West LA',
-  learnedDate: new Date('12/23/21'),
+  learnedDate: new Date('1/23/22'),
   notes: [
     '',
     '',
@@ -26,8 +26,170 @@ export const get: RequestHandler<
 	return {
 		body: [
 			{
+				name: 'Circling destruction',
+				attack: 'Left straight punch',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/29/22'),
+				notes: [
+					'Step to 12 right neutral bow, right inward parry to left arm, left outward parry to left arm, right outward back-knuckle to left ribs',
+					'Step to 3 right forward bow, left inward heelpalm to face',
+					'Right neutral bow, right inward handsword to left neck',
+					'Right pull right eye, left horizontal heelpalm to left kidney, right front scoop to groin'
+				]
+			},
+			{
+				name: '???',
+				attack: 'Right straight punch',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/27/22'),
+				notes: [
+					'Step to 12 left neutral bow, left inward block to right arm',
+					'Step to 10:30 right neutral bow, right hammerfist to face',
+					'Unwind left horizontal forearm to right ribs',
+					'Right looping back-knuckle to face, left check right arm'
+				]
+			},
+			{
+				name: 'Twisted twig',
+				attack: 'Right wrist lock',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/27/22'),
+				notes: [
+					'Step to 12 right neutral bow, right outward elbow to solar plexus',
+					'Right hammerfist to groin'
+				]
+			},
+			{
+				name: 'Obscure sword',
+				attack: 'Left straight shoulder grab from 4:30',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/27/22'),
+				notes: [
+					'Step to 1:30 left neutral bow, left pin right',
+					'Unwind right outward handsword to neck, left ball kick to groin'
+				]
+			},
+			{
+				name: 'Tripping arrow',
+				attack: 'Low bear hun from 12, arms free',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/27/22'),
+				notes: [
+					'Step to 10:30 left neutral bow, right heelpalm to left ear, left grab right upper arm',
+					'Step-through to 10:30, right buckle right knee, left grab right wrist',
+					'Right ball kick to left collarbone, right leg clear right arm'
+				]
+			},
+			{
+				name: 'Retreating pendulum',
+				attack: 'Rear cross right back kick',
+				startIn: 'Right neutral bow',
+				class: 'West LA',
+				learnedDate: new Date('1/25/22'),
+				notes: [
+					'Step to 6 left front twist, right downward block to right leg',
+					'Step to 12 right neutral bow, right knife-edge kick to left knee',
+					'Right hammerfist to neck',
+					'Step up to 12, right rear scoop to groin, right buckle to groin'
+				]
+			},
+			{
+				name: 'Obscure claws',
+				attack: 'Left straight shoulder grab from 4:30',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/25/22'),
+				notes: [
+					'Step to 6 left neutral bow, right outward claw to face, left inward claw to face',
+					'Left forward bow, right arm wrap around left elbow',
+					''
+				]
+			},
+			{
+				name: 'Squeezing the peach',
+				attack: 'Low bear hug from 6, arms pinned',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/25/22'),
+				notes: [
+					'Step to 6 right neutral bow, right pin arms, left grab groin',
+					'Step to 1:30 left neutral bow, left pin arms',
+					'Right leg back scoop',
+					'Right back buckle, right obscure back elbow'
+				]
+			},
+			{
+				name: 'Shield and sword',
+				attack: 'Left straight punch',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/25/22'),
+				notes: [
+					'Step to 1:30 right forward bow, right inward handsword to right neck, left extended outward block to elbow',
+					'Right neutral bow, right check shoulder, left inward elbow to left ribs',
+					'Step to 4:30 right front twist, right hammerfist to left kidney, right roundhouse kick to left kidney'
+				]
+			},
+			{
+				name: 'Twin kimono',
+				attack: 'Two hand lapel grab and push',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/25/22'),
+				notes: [
+					'Step to 6 right neutral bow, right upward block to elbows, left pin hands',
+					'Step to 4:30 right neutral bow, right outward back-knuckle to left ribs',
+					'Right inward block to arms',
+					'Right outward handsword to neck'
+				]
+			},
+			{
+				name: 'Defying the storm',
+				attack: 'Right roundhouse club to face',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/20/22'),
+				notes: [
+					'Step to 11:30 right neutral bow, right inward handsword to right arm, left outward handsword to right arm',
+					'Right grab right elbow, left grab right wrist',
+					'Step to 4:30 left neutral bow',
+					'Right knee to solar plexus',
+					'Right inward overhead elbow to spine'
+				]
+			},
+			{
+				name: 'Shield and Mace',
+				attack: 'Right straight punch to face',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/16/22'),
+				notes: [
+					'Step to 10:30 left forward bow, right hand over left hand',
+					'Left forward bow, right outward block, left straight punch to right kidney',
+					'Shuffle to 12, right inward handsword to neck'
+				]
+			},
+			{
+				name: 'Charging Ram',
+				attack: 'Low charge from 12',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('1/13/22'),
+				notes: [
+					'Step to 4:30 right forward bow, right downward block to left arm, left outward handsword to neck',
+					'Right neutral bow, right inward handsword to neck',
+					'Right ball kick to face',
+					'Left roundhouse kick to solar plexus'
+				]
+			},
+			{
 				name: 'Shielding Hammer (extension)',
-				attack: 'Right roundhouse punch to face',
+				attack: 'Left roundhouse punch to face',
 				startIn: 'Natural stance',
 				class: 'West LA',
 				learnedDate: new Date('12/23/21'),
@@ -102,7 +264,7 @@ export const get: RequestHandler<
 				class: 'West LA',
 				learnedDate: new Date('12/23/21'),
 				notes: [
-					'Step to 6 right neutral bow, right upward block to left elbow',
+					'Step to 6 right neutral bow, right upward block to left elbow, left pin right wrist and twist',
 					'Step to 5 right neutral bow, right downward hammerfist to groin',
 					'Right forward bow, right outward extended block to left elbow, left heelpalm to face',
 					'Drag-step to 12 right knife-edge kick to right knee, right inward handsword to neck'
@@ -154,7 +316,7 @@ export const get: RequestHandler<
 				learnedDate: new Date('12/14/21'),
 				notes: [
 					'Step to 11 right knee to groin, left upward heelpalm to right elbow',
-					'Right inward elbow, left check right arm'
+					'Right inward elbow to solar plexus, left check right arm'
 				]
 			},
 			{
@@ -202,8 +364,7 @@ export const get: RequestHandler<
 				class: 'West LA',
 				learnedDate: new Date('12/4/21'),
 				notes: [
-					'Step to 7:30 right neutral bow',
-					'Right downward block to right leg',
+					'Step to 7:30 right neutral bow, right downward block to right leg',
 					'Right shuffle to 1:30, right inward elbow to face, left check right shoulder'
 				]
 			},
@@ -222,12 +383,12 @@ export const get: RequestHandler<
 			},
 			{
 				name: 'Sword and Hammer',
-				attack: 'Right shoulder grab from 3',
+				attack: 'Left side right shoulder grab from 3',
 				startIn: 'Natural stance',
 				class: 'West LA',
 				learnedDate: new Date('12/4/21'),
 				notes: [
-					'Step to 2 right neutral bow, right rising obscure outward handsword to chin, left pin left',
+					'Step to 2 right neutral bow, right rising obscure outward handsword to chin, left pin left hand',
 					'Right hammerfist to groin'
 				]
 			},
@@ -1059,14 +1220,6 @@ export const get: RequestHandler<
 					'Right inward reverse handsword to neck and outward handsword to right knee, left pull right arm',
 					'Right side kick to left knee'
 				]
-			},
-			{
-				name: 'Shielding hammer',
-				attack: 'Left hooking punch',
-				startIn: 'Natural stance',
-				class: 'Beginner',
-				learnedDate: null,
-				notes: []
 			},
 			{
 				name: 'Sleeper',
