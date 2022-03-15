@@ -9,7 +9,7 @@ import type { Technique } from '../../types/data/objectTypes/Technique';
   attack: '',
   startIn: 'Natural stance',
   class: 'West LA',
-  learnedDate: new Date('1/23/22'),
+  learnedDate: new Date('3/8/22'),
   notes: [
     '',
     '',
@@ -21,6 +21,157 @@ import type { Technique } from '../../types/data/objectTypes/Technique';
 export const get: RequestHandler<DataResponse<Technique>> = async () => {
 	return {
 		body: [
+			{
+				name: 'Gripping talon',
+				attack: 'Right straight wrist grab',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/10/22'),
+				notes: [
+					'Step to 12, right strike left hand on own left',
+					'Right underhand hammerfist to groin, left grab left wrist',
+					'Step to 10:30, right outward back-knuckle to left ribs',
+					'Right vertical punch to neck, right leg buckle left knee',
+					'Step to 4:30, right knee to face'
+				]
+			},
+			{
+				name: 'Returning storm',
+				attack: 'Right roundhouse club, right backhand club',
+				startIn: 'Neutral bow',
+				class: 'West LA',
+				learnedDate: new Date('3/10/22'),
+				notes: [
+					'Step to 7:30 right neutral bow',
+					'Step to 1:30 left neutral, right check to right forearm, left inward block to right upper arm',
+					'Right pull right wrist, left inward block to right arm',
+					'Right ball kick to face',
+					'Right lifting stiff-arm back-knuckle punch to face'
+				]
+			},
+			{
+				name: 'Obscure wing',
+				attack: 'Straight right shoulder grab from 4:30',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					'Step to 3 horse stance, right back elbow to solar plexus',
+					'Right hammerfist to groin',
+					'Right obscure vertical elbow to jaw'
+				]
+			},
+			{
+				name: 'Thrusting prongs',
+				attack: 'Bear hug from 12, arms pinned',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					'Step to 6 left forward bow, right prong to left hip, left prong to right hip',
+					'Left u-check to right arm',
+					'Right back elbow to left arm, right knee to groin',
+					'Right inward elbow to face'
+				]
+			},
+			{
+				name: 'Repeating mace (extension)',
+				attack: 'Attempted left center push',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					"Step to 4:30, Left waiter's hand to left wrist, right middle knuckle to left ribs",
+					'Right outward back-knuckle to left ribs',
+					'Right looping overhead kick to left knee',
+					'Right outward back-knuckle to face',
+					'Left thrusting sweep kick to left leg, land in front twist',
+					'Unwind left heelpalm to face',
+					'Right spinning back kick to groin',
+					'Right buckle left leg',
+					'Right stomp right knee',
+					'Left rear cross stomp to groin',
+					'Right stomp right ankle'
+				]
+			},
+			{
+				name: 'Repeating mace',
+				attack: 'Attempted left center push',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					"Step to 4:30, Left waiter's hand to left wrist, right middle knuckle to left ribs",
+					'Right outward back-knuckle to left ribs',
+					'Right looping overhead kick to left knee'
+				]
+			},
+			{
+				name: '',
+				attack: '',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: ['', '', '']
+			},
+			{
+				name: 'Cross of destruction',
+				attack: 'Two-hand choke from 6',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					'Left hand grab left wrist, right hand grab right wrist',
+					'Step to 10:30 left neutral bow and twist',
+					'Step to 10:30, left pull left up and over head',
+					'Pull down and up to break left elbow over right elbow',
+					'Pull back and forward to break right elbow over left elbow',
+					'Right ball kick to right knee'
+				]
+			},
+			{
+				name: 'Sleeper',
+				attack: 'Right straight punch',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					'Step to 10:30 left neutral bow, left inward block to right arm',
+					'Left forward bow, right inward ridgehand to neck',
+					'Step to 3 calf stomp into horse stance',
+					'Step to 6 right neutral bow, drop to ground',
+					'Left wide kneel, right vertical punch to face'
+				]
+			},
+			{
+				name: 'Obstructing the storm',
+				attack: 'Right overhead club',
+				startIn: 'Natural stance',
+				class: 'West LA',
+				learnedDate: new Date('3/8/22'),
+				notes: [
+					'Step to 10:30 left neutral bow, right upward block to right wrist, left upward block to right wrist',
+					'Step to 1:30, right grab right wrist, left inward block to right upper arm',
+					'Right roundhouse knee to solar plexus'
+				]
+			},
+			{
+				name: 'Reversing mace (extension)',
+				attack: 'Left straight punch',
+				startIn: 'Neutral bow',
+				class: 'West LA',
+				learnedDate: new Date('3/1/22'),
+				notes: [
+					'Step to 4:30 right neutral bow, right inward block to left arm',
+					"Right outward back-knuckle to left ribs, left waiter's hand to left arm",
+					'Right looping overhead kick to left knee',
+					'Step to 1:30 right front twist, right outward back-knuckle to left ribs',
+					'Unwind, left outward back-knuckle to left ribs',
+					'Step to 3 left forward bow, right straight punch',
+					'Both hands grab shoulders, right knee to spine',
+					'Step to 7:30 right stomp to left calf'
+				]
+			},
 			{
 				name: 'Circling destruction',
 				attack: 'Left straight punch',
@@ -35,7 +186,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: '???',
+				name: 'Flashing mace',
 				attack: 'Right straight punch',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -54,7 +205,8 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				class: 'West LA',
 				learnedDate: new Date('1/27/22'),
 				notes: [
-					'Step to 12 right neutral bow, right outward elbow to solar plexus',
+					'Step to 12 right neutral bow',
+					'Right outward elbow to solar plexus',
 					'Right hammerfist to groin'
 				]
 			},
@@ -159,7 +311,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Shield and Mace',
+				name: 'Shield and mace',
 				attack: 'Right straight punch to face',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -171,7 +323,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Charging Ram',
+				name: 'Charging ram',
 				attack: 'Low charge from 12',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -184,7 +336,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Shielding Hammer (extension)',
+				name: 'Shielding hammer (extension)',
 				attack: 'Left roundhouse punch to face',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -200,7 +352,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Thrusting Salute (extension)',
+				name: 'Thrusting salute (extension)',
 				attack: 'Right ball kick to groin',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -217,7 +369,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Evading the Storm (extension)',
+				name: 'Evading the storm (extension)',
 				attack: 'Right overhead club to face',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -237,7 +389,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Glancing Salute (extension)',
+				name: 'Glancing salute (extension)',
 				attack: 'Right cross shoulder shove',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -254,7 +406,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Lone Kimono (extension)',
+				name: 'Lone kimono (extension)',
 				attack: 'Left straight lapel grab',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -267,7 +419,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Mace of Aggression',
+				name: 'Mace of aggression',
 				attack: 'Two hand lapel grab',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -280,7 +432,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Clutching Feathers',
+				name: 'Clutching feathers',
 				attack: 'Left straight hair grab',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -292,8 +444,8 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Aggressive Twins',
-				attack: 'Low bear hug from 12, arms pinned',
+				name: 'Aggressive twins',
+				attack: 'Low bear hug from 6, arms pinned',
 				startIn: 'Natural stance',
 				class: 'West LA',
 				learnedDate: new Date('12/14/21'),
@@ -305,7 +457,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Gift of Destruction',
+				name: 'Gift of destruction',
 				attack: 'Right handshake',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -316,7 +468,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Glancing Salute',
+				name: 'Glancing salute',
 				attack: 'Right cross shoulder shove',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -329,7 +481,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Lone Kimono',
+				name: 'Lone kimono',
 				attack: 'Right straight lapel grab',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -341,7 +493,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Checking the Storm',
+				name: 'Checking the storm',
 				attack: 'Right overhead club',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -354,7 +506,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Deflecting Hammer',
+				name: 'Deflecting hammer',
 				attack: 'Right ball kick to groin',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -365,7 +517,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Grasp of Death',
+				name: 'Grasp of death',
 				attack: 'Right headlock from 6',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -378,7 +530,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Sword and Hammer',
+				name: 'Sword and hammer',
 				attack: 'Left side right shoulder grab from 3',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -389,7 +541,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Attacking Mace',
+				name: 'Attacking mace',
 				attack: 'Right straight punch',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -403,7 +555,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Sword of Destruction',
+				name: 'Sword of destruction',
 				attack: 'Left roundhouse punch to face',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -415,7 +567,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Alternating Maces',
+				name: 'Alternating maces',
 				attack: 'Low two-hand shove',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -1014,19 +1166,6 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Gripping Talon',
-				attack: 'Right straight wrist grab',
-				startIn: 'Natural stance',
-				class: 'Black Belt prep',
-				learnedDate: null,
-				notes: [
-					'Right strike left hand on own left',
-					'Right underhand hammerfist to groin, left grab left wrist',
-					'Right outward back-knuckle to left ribs, left leg step to 12',
-					'Right inward horizontal forearm to neck, right leg buckle left knee'
-				]
-			},
-			{
 				name: 'Leap of Death',
 				attack: 'Right straight punch',
 				startIn: 'Natural stance',
@@ -1168,19 +1307,6 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Returning storm',
-				attack: 'Right roundhouse club, right backhand club',
-				startIn: 'Natural stance',
-				class: 'Black Belt prep',
-				learnedDate: null,
-				notes: [
-					'Left leg step to 7:30',
-					'Right inward block to right arm, left inward block to right arm, left leg step-through to 1:30',
-					'Right pull right wrist, left inward block to right arm, left leg step to 12',
-					'Right lifting stiff-arm back-knuckle punch to face, left grab right arm, right front kick to solar plexus'
-				]
-			},
-			{
 				name: 'Reversing mace',
 				attack: 'Baited left straight punch',
 				startIn: 'Right fighting stance, right baiting',
@@ -1293,19 +1419,6 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 					'Right downward heelpalm to right shoulder, left downward heelpalm to left shoulder, left leg step-through to 1:30',
 					'Right side heel to head',
 					'Right rear stomp to right collarbone'
-				]
-			},
-			{
-				name: 'Thrusting prongs',
-				attack: 'Bear hug from 12, arms pinned',
-				startIn: 'Natural stance',
-				class: 'Black Belt prep',
-				learnedDate: null,
-				notes: [
-					'Right prong to left hip, left prong to right hip, right leg step to 6',
-					'Left u-check to right arm',
-					'Right back elbow to left arm, right knee to groin',
-					'Right inward elbow to face'
 				]
 			},
 			{
