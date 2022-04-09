@@ -444,7 +444,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 				]
 			},
 			{
-				name: 'Aggressive twins',
+				name: 'Captured twigs',
 				attack: 'Low bear hug from 6, arms pinned',
 				startIn: 'Natural stance',
 				class: 'West LA',
@@ -595,7 +595,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 			},
 			{
 				name: 'Retreating Pendulum',
-				attack: 'Rear crossover right side kick',
+				attack: 'Rear cross right side kick',
 				startIn: 'Right neutral bow',
 				class: 'Black Belt',
 				learnedDate: new Date('10/23/21'),
