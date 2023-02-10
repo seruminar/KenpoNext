@@ -19,6 +19,950 @@ import type { Technique } from '../../types/data/objectTypes/Technique';
 
 */
 export const get: RequestHandler<DataResponse<Technique>> = async () => {
+	let newContent = {
+		'Yellow #01 - Delayed Sword': {
+			name: 'Delayed Sword',
+			sequence: 'Yellow #1',
+			video: 'https://player.vimeo.com/video/508848719',
+			attack: 'Front – right-hand, lapel grab'
+		},
+		'Yellow #02 - Alternating Maces': {
+			name: 'Alternating Maces',
+			sequence: 'Yellow #2',
+			video: 'https://player.vimeo.com/video/508851295',
+			attack: 'Front – two-hand push'
+		},
+		'Yellow #03 - Sword of Destruction': {
+			name: 'Sword of Destruction',
+			sequence: 'Yellow #3',
+			video: 'https://player.vimeo.com/video/508851506',
+			attack: 'Front – left, roundhouse punch'
+		},
+		'Yellow #04 - Attacking Mace': {
+			name: 'Attacking Mace',
+			sequence: 'Yellow #4',
+			video: 'https://player.vimeo.com/video/508851745',
+			attack: 'Front – right, step-through punch'
+		},
+		'Yellow #05 - Sword and Hammer': {
+			name: 'Sword and Hammer',
+			sequence: 'Yellow #5',
+			video: 'https://player.vimeo.com/video/508852036',
+			attack: 'Right flank – left-hand, shoulder grab'
+		},
+		'Yellow #06 - Deflecting Hammer': {
+			name: 'Deflecting Hammer',
+			sequence: 'Yellow #6',
+			video: 'https://player.vimeo.com/video/508852274',
+			attack: 'Front – right, thrust kick'
+		},
+		'Yellow #07 - Checking the Storm': {
+			name: 'Checking the Storm',
+			sequence: 'Yellow #7',
+			video: 'https://player.vimeo.com/video/509619202',
+			attack: 'Front – right, overhead club'
+		},
+		'Yellow #08 - Grasp of Death': {
+			name: 'Grasp of Death',
+			sequence: 'Yellow #8',
+			video: 'https://player.vimeo.com/video/509509172',
+			attack: 'Left flank – right-arm headlock'
+		},
+		'Yellow #09 - Captured Twigs': {
+			name: 'Captured Twigs',
+			sequence: 'Yellow #9',
+			video: 'https://player.vimeo.com/video/509623594',
+			attack: 'Rear – high bear-hug — arms pinned'
+		},
+		'Yellow #10 - Mace of Aggression': {
+			name: 'Mace of Agression',
+			sequence: 'Yellow #10',
+			video: 'https://player.vimeo.com/video/509508512',
+			attack: 'Front – two-hand, lapel grab — pulling in'
+		},
+		'Orange #01 - Triggered Salute': {
+			name: 'Triggered Salute',
+			sequence: 'Orange #1',
+			video: 'https://player.vimeo.com/video/509633855',
+			attack: 'Front – right-hand, direct push'
+		},
+		'Orange #02 - Thrusting Salute': {
+			name: 'Thrusting Salute',
+			sequence: 'Orange #2',
+			video: 'https://player.vimeo.com/video/509634088',
+			attack: 'Front – right, step-through, ball kick'
+		},
+		'Orange #03 - Five Swords': {
+			name: 'Five Swords',
+			sequence: 'Orange #3',
+			video: 'https://player.vimeo.com/video/509634340',
+			attack: 'Front – right, step-through, roundhouse punch'
+		},
+		'Orange #04 - Crashing Wings': {
+			name: 'Crashing Wings',
+			sequence: 'Orange #4',
+			video: 'https://player.vimeo.com/video/509634540',
+			attack: 'Rear – bear-hug — arms free'
+		},
+		'Orange #05 - Shielding Hammer': {
+			name: 'Shielding Hammer',
+			sequence: 'Orange #5',
+			video: 'https://player.vimeo.com/video/509634716',
+			attack: 'Front – left, step-through, roundhouse punch'
+		},
+		'Orange #06 - Evading the Storm': {
+			name: 'Evading the Storm',
+			sequence: 'Orange #6',
+			video: 'https://player.vimeo.com/video/509634859',
+			attack: 'Front – right, step-through, overhead club'
+		},
+		'Orange #07 - Lone Kimono': {
+			name: 'Lone Kimono',
+			sequence: 'Orange #7',
+			video: 'https://player.vimeo.com/video/509635054',
+			attack: 'Front – left-hand, lapel grab — palm up'
+		},
+		'Orange #08 - Gift of Destruction': {
+			name: 'Gift of Destruction',
+			sequence: 'Orange #8',
+			video: 'https://player.vimeo.com/video/509635185',
+			attack: 'Front – handshake'
+		},
+		'Orange #09 - Clutching Feathers': {
+			name: 'Clutching Feathers',
+			sequence: 'Orange #9',
+			video: 'https://player.vimeo.com/video/509637569',
+			attack: 'Front – left-hand, hair grab'
+		},
+		'Orange #10 - Locking Horns': {
+			name: 'Locking Horns',
+			sequence: 'Orange #10',
+			video: 'https://player.vimeo.com/video/509637718',
+			attack: 'Front – headlock'
+		},
+		'Orange #11 - Glancing Salute': {
+			name: 'Glancing Salute',
+			sequence: 'Orange #11',
+			video: 'https://player.vimeo.com/video/509637879',
+			attack: 'Front – right-hand, cross push'
+		},
+		'Orange #12 - Grip of Death': {
+			name: 'Grip of Death',
+			sequence: 'Orange #12',
+			video: 'https://player.vimeo.com/video/509638062',
+			attack: 'Left flank – right-arm headlock'
+		},
+		'Orange #13 - Dance of Death': {
+			name: 'Dance of Death',
+			sequence: 'Orange #13',
+			video: 'https://player.vimeo.com/video/509638233',
+			attack: 'Front – right, straight punch — left leg forward'
+		},
+		'Orange #14 - Scraping Hoof': {
+			name: 'Scraping Hoof',
+			sequence: 'Orange #14',
+			video: 'https://player.vimeo.com/video/509638447',
+			attack: 'Rear – full nelson'
+		},
+		'Orange #15 - Repeating Mace': {
+			name: 'Repeating Mace',
+			sequence: 'Orange #15',
+			video: 'https://player.vimeo.com/video/509638605',
+			attack: 'Front – left-hand push'
+		},
+		"Orange #16 - Striking Serpent's Head": {
+			name: "Striking Serpent's Head",
+			sequence: 'Orange #16',
+			video: 'https://player.vimeo.com/video/509638746',
+			attack: 'Front – bear-hug — arms free'
+		},
+		'Purple #01 - Leaping Crane': {
+			name: 'Leaping Crane',
+			sequence: 'Purple #1',
+			video: 'https://player.vimeo.com/video/509680684',
+			attack: 'Front – right, step-through punch'
+		},
+		'Purple #02 - Reversing Mace': {
+			name: 'Reversing Mace',
+			sequence: 'Purple #2',
+			video: 'https://player.vimeo.com/video/509680903',
+			attack: 'Front – left, step-through punch'
+		},
+		'Purple #03 - Obscure Wing': {
+			name: 'Obscure Wing',
+			sequence: 'Purple #3',
+			video: 'https://player.vimeo.com/video/509680903',
+			attack: 'Right flank – left-hand, shoulder grab'
+		},
+		'Purple #04 - Obscure Sword': {
+			name: 'Obscure Sword',
+			sequence: 'Purple #4',
+			video: 'https://player.vimeo.com/video/509681271',
+			attack: 'Right flank – left-hand, shoulder grab'
+		},
+		'Purple #05 - Snapping Twig': {
+			name: 'Snapping Twig',
+			sequence: 'Purple #5',
+			video: 'https://player.vimeo.com/video/509681448',
+			attack: 'Front – left-hand, chest push'
+		},
+		'Purple #06 - Crossing Talon': {
+			name: 'Crossing Talon',
+			sequence: 'Purple #6',
+			video: 'https://player.vimeo.com/video/509681686',
+			attack: 'Front – right, cross, wrist grab'
+		},
+		'Purple #07 - Raining Claw': {
+			name: 'Raining Claw',
+			sequence: 'Purple #7',
+			video: 'https://player.vimeo.com/video/509681984',
+			attack: 'Front – right, uppercut punch'
+		},
+		'Purple #08 - Spiraling Twig': {
+			name: 'Spiraling Twig',
+			sequence: 'Purple #8',
+			video: 'https://player.vimeo.com/video/509682146',
+			attack: 'Rear – bear-hug — arms free'
+		},
+		'Purple #09 - Twirling Wings': {
+			name: 'Twirling Wings',
+			sequence: 'Purple #9',
+			video: 'https://player.vimeo.com/video/509682392',
+			attack: 'Rear – stiff, two-hand, neck or shoulder grab'
+		},
+		'Purple #10 - Buckling Branch': {
+			name: 'Buckling Branch',
+			sequence: 'Purple #10',
+			video: 'https://player.vimeo.com/video/509682592',
+			attack: 'Front – left, step-through, straight kick'
+		},
+		'Purple #11 - Crushing Hammer': {
+			name: 'Crushing Hammer',
+			sequence: 'Purple #11',
+			video: 'https://player.vimeo.com/video/509682784',
+			attack: 'Rear – high bear-hug — arms pinned'
+		},
+		'Purple #12 - Locked Wing': {
+			name: 'Locked Wing',
+			sequence: 'Purple #12',
+			video: 'https://player.vimeo.com/video/509683008',
+			attack: 'Rear – right hammer-lock'
+		},
+		'Purple #13 - Captured Leaves': {
+			name: 'Captured Leaves',
+			sequence: 'Purple #13',
+			video: 'https://player.vimeo.com/video/509683267',
+			attack: 'Right flank – finger lock'
+		},
+		'Purple #14 - Calming the Storm': {
+			name: 'Calming the Storm',
+			sequence: 'Purple #14',
+			video: 'https://player.vimeo.com/video/509683422',
+			attack: 'Front – right, step-through, roundhouse club'
+		},
+		'Purple #15 - Thrusting Prongs': {
+			name: 'Thrusting Prongs',
+			sequence: 'Purple #15',
+			video: 'https://player.vimeo.com/video/509683625',
+			attack: 'Front – bear-hug — arms pinned'
+		},
+		'Purple #16 - Twisted Twig': {
+			name: 'Twisted Twig',
+			sequence: 'Purple #16',
+			video: 'https://player.vimeo.com/video/509683811',
+			attack: 'Front – wrist lock'
+		},
+		'Blue #01 - Parting Wings': {
+			name: 'Parting Wings',
+			sequence: 'Blue #1',
+			video: 'https://player.vimeo.com/video/509981587',
+			attack: 'Front – two-hand push'
+		},
+		'Blue #02 - Swinging Pendulum': {
+			name: 'Swinging Pendulum',
+			sequence: 'Blue #2',
+			video: 'https://player.vimeo.com/video/509981894',
+			attack: 'Front – right, roundhouse kick'
+		},
+		'Blue #03 - Obstructing the Storm': {
+			name: 'Obstructing the Storm',
+			sequence: 'Blue #3',
+			video: 'https://player.vimeo.com/video/509982080',
+			attack: 'Front – right, step-through, overhead club'
+		},
+		'Blue #04 - Shield and Sword': {
+			name: 'Shield and Sword',
+			sequence: 'Blue #4',
+			video: 'https://player.vimeo.com/video/509982330',
+			attack: 'Front – left, step-through punch'
+		},
+		'Blue #05 - Darting Mace': {
+			name: 'Darting Mace',
+			sequence: 'Blue #5',
+			video: 'https://player.vimeo.com/video/509982589',
+			attack: 'Front – two-hand, wrist grab'
+		},
+		'Blue #06 - Charging Ram': {
+			name: 'Charging Ram',
+			sequence: 'Blue #6',
+			video: 'https://player.vimeo.com/video/509982890',
+			attack: 'Front – tackle'
+		},
+		'Blue #07 - Sleeper': {
+			name: 'Sleeper',
+			sequence: 'Blue #7',
+			video: 'https://player.vimeo.com/video/509983223',
+			attack: 'Front – right, step-through straight punch'
+		},
+		'Blue #08 - Twin Kimono': {
+			name: 'Twin Kimono',
+			sequence: 'Blue #8',
+			video: 'https://player.vimeo.com/video/509983567',
+			attack: 'Front – two-hand, lapel grab — pushing out'
+		},
+		'Blue #09 - Thundering Hammers': {
+			name: 'Thundering Hammers',
+			sequence: 'Blue #9',
+			video: 'https://player.vimeo.com/video/509983803',
+			attack: 'Front – right, step-through, straight punch'
+		},
+		'Blue #10 - Hooking Wings': {
+			name: 'Hooking Wings',
+			sequence: 'Blue #10',
+			video: 'https://player.vimeo.com/video/509984061',
+			attack: 'Front – two-hand, low push'
+		},
+		'Blue #11 - Cross of Destruction': {
+			name: 'Cross of Destruction',
+			sequence: 'Blue #11',
+			video: 'https://player.vimeo.com/video/509984325',
+			attack: 'Rear – two-hand choke'
+		},
+		'Blue #12 - Squeezing the Peach': {
+			name: 'Squeezing the Peach',
+			sequence: 'Blue #12',
+			video: 'https://player.vimeo.com/video/509984663',
+			attack: 'Rear – high bear-hug — arms pinned'
+		},
+		'Blue #13 - Circling Wing': {
+			name: 'Circling Wing',
+			sequence: 'Blue #13',
+			video: 'https://player.vimeo.com/video/509984897',
+			attack: 'Rear – two-hand choke — arms bent'
+		},
+		'Blue #14 - Gift in Return': {
+			name: 'Gift in Return',
+			sequence: 'Blue #14',
+			video: 'https://player.vimeo.com/video/509985192',
+			attack: 'Front – handshake'
+		},
+		'Blue #15 - Bow of Compulsion': {
+			name: 'Bow of Compulsion',
+			sequence: 'Blue #15',
+			video: 'https://player.vimeo.com/video/509985508',
+			attack: "Front – wrist lock — against opponent's chest"
+		},
+		'Blue #16 - Flight to Freedom': {
+			name: 'Flight to Freedom',
+			sequence: 'Blue #16',
+			video: 'https://player.vimeo.com/video/509985843',
+			attack: 'Rear – right hammerlock'
+		},
+		'Green #01 - Begging Hands': {
+			name: 'Begging Hands',
+			sequence: 'Green #1',
+			video: 'https://player.vimeo.com/video/510226777',
+			attack: 'Front – two-hand grab to wrists'
+		},
+		'Green #02 - Thrusting Wedge': {
+			name: 'Thrusting Wedge',
+			sequence: 'Green #2',
+			video: 'https://player.vimeo.com/video/510227011',
+			attack: 'Front – two-hand, high push'
+		},
+		'Green #03 - Shield and Mace': {
+			name: 'Shield and Mace',
+			sequence: 'Green #3',
+			video: 'https://player.vimeo.com/video/510227321',
+			attack: 'Front – right, step-through punch'
+		},
+		'Green #04 - Retreating Pendulum': {
+			name: 'Retreating Pendulum',
+			sequence: 'Green #4',
+			video: 'https://player.vimeo.com/video/510227689',
+			attack: 'Front – right, thrusting heel-kick'
+		},
+		'Green #05 - Raking Mace': {
+			name: 'Raking Mace',
+			sequence: 'Green #5',
+			video: 'https://player.vimeo.com/video/510227929',
+			attack: 'Front – two-hand, lapel grab — pulling in'
+		},
+		'Green #06 - Destructive Twins': {
+			name: 'Destructive Twins',
+			sequence: 'Green #6',
+			video: 'https://player.vimeo.com/video/510228206',
+			attack: 'Front – two-hand choke — pulling in'
+		},
+		'Green #07 - Defying the Storm': {
+			name: 'Defying the Storm',
+			sequence: 'Green #7',
+			video: 'https://player.vimeo.com/video/510228529',
+			attack: 'Front – right, step-through, side club'
+		},
+		'Green #08 - Tripping Arrow': {
+			name: 'Tripping Arrow',
+			sequence: 'Green #8',
+			video: 'https://player.vimeo.com/video/510228798',
+			attack: 'Front – bear-hug — arms free'
+		},
+		'Green #09 - Flashing Wings': {
+			name: 'Flashing Wings',
+			sequence: 'Green #9',
+			video: 'https://player.vimeo.com/video/510229096',
+			attack: 'Front – right, step-through punch'
+		},
+		'Green #10 - Hugging Pendulum': {
+			name: 'Hugging Pendulum',
+			sequence: 'Green #10',
+			video: 'https://player.vimeo.com/video/510229488',
+			attack: 'Front – right, drag-up, thrusting, side kick'
+		},
+		'Green #11 - Snaking Talon': {
+			name: 'Snaking Talon',
+			sequence: 'Green #11',
+			video: 'https://player.vimeo.com/video/510229825',
+			attack: 'Front – two-hand, chest push'
+		},
+		'Green #12 - Conquering Shield': {
+			name: 'Conquering Shield',
+			sequence: 'Green #12',
+			video: 'https://player.vimeo.com/video/510230171',
+			attack: 'Front – left, stiff-arm, lapel grab'
+		},
+		'Green #13 - Repeated Devastation': {
+			name: 'Repeated Devastation',
+			sequence: 'Green #13',
+			video: 'https://player.vimeo.com/video/510230427',
+			attack: 'Rear – full nelson'
+		},
+		'Green #14 - Crossed Twigs': {
+			name: 'Crossed Twigs',
+			sequence: 'Green #14',
+			video: 'https://player.vimeo.com/video/510230819',
+			attack: 'Rear – two-hand grab to wrists'
+		},
+		'Green #15 - Wings of Silk': {
+			name: 'Wings of Silk',
+			sequence: 'Green #15',
+			video: 'https://player.vimeo.com/video/510231188',
+			attack: 'Rear – two-arm lock'
+		},
+		'Green #16 - Entangled Wing': {
+			name: 'Entangled Wing',
+			sequence: 'Green #16',
+			video: 'https://player.vimeo.com/video/510231555',
+			attack: 'Front – arm lock'
+		},
+		'3rd Brown #1 - Flashing Mace': {
+			name: 'Flashing Mace',
+			sequence: '3rd Brown #1',
+			video: 'https://player.vimeo.com/video/511991599',
+			attack: 'Front – right, step-through punch'
+		},
+		'3rd Brown #2 - Detour from Doom': {
+			name: 'Detour from Doom',
+			sequence: '3rd Brown #2',
+			video: 'https://player.vimeo.com/video/511991961',
+			attack: 'Front – right, round-house kick'
+		},
+		'3rd Brown #3 - Returning Storm': {
+			name: 'Returning Storm',
+			sequence: '3rd Brown #3',
+			video: 'https://player.vimeo.com/video/511992223',
+			attack: 'Front – right roundhouse and backhand club'
+		},
+		'3rd Brown #4 - Glancing Spear': {
+			name: 'Glancing Spear',
+			sequence: '3rd Brown #4',
+			video: 'https://player.vimeo.com/video/511992492',
+			attack: 'Front – right, direct, wrist grab to left arm'
+		},
+		'3rd Brown #5 - Encounter with Danger': {
+			name: 'Encounter with Danger',
+			sequence: '3rd Brown #5',
+			video: 'https://player.vimeo.com/video/511992775',
+			attack: 'Front – two-hand push'
+		},
+		'3rd Brown #6 - Circling the Horizon': {
+			name: 'Circling the Horizon',
+			sequence: '3rd Brown #6',
+			video: 'https://player.vimeo.com/video/511992984',
+			attack: 'Front – right, step-through punch'
+		},
+		'3rd Brown #7 - Gripping Talon': {
+			name: 'Gripping Talon',
+			sequence: '3rd Brown #7',
+			video: 'https://player.vimeo.com/video/511993220',
+			attack: 'Front – left-hand, direct, wrist grab'
+		},
+		'3rd Brown #8 - Circling Destruction': {
+			name: 'Circling Destruction',
+			sequence: '3rd Brown #8',
+			video: 'https://player.vimeo.com/video/511993561',
+			attack: 'Front – left, step-through punch'
+		},
+		'3rd Brown #9 - Gathering Clouds': {
+			name: 'Gathering Clouds',
+			sequence: '3rd Brown #9',
+			video: 'https://player.vimeo.com/video/511993815',
+			attack: 'Front – right, straight, shuffle punch'
+		},
+		'3rd Brown #10 - Fallen Cross': {
+			name: 'Fallen Cross',
+			sequence: '3rd Brown #10',
+			video: 'https://player.vimeo.com/video/511994030',
+			attack: 'Rear – two-hand choke'
+		},
+		'3rd Brown #11 - Brushing the Storm': {
+			name: 'Brushing the Storm',
+			sequence: '3rd Brown #11',
+			video: 'https://player.vimeo.com/video/511994229',
+			attack: 'Right-flank – right, step-through, overhead club'
+		},
+		'3rd Brown #12 - Obscure Claws': {
+			name: 'Obscure Claws',
+			sequence: '3rd Brown #12',
+			video: 'https://player.vimeo.com/video/511994460',
+			attack: 'Right-flank – left-hand, shoulder grab'
+		},
+		'3rd Brown #13 - Dominating Circles': {
+			name: 'Dominating Circles',
+			sequence: '3rd Brown #13',
+			video: 'https://player.vimeo.com/video/511994701',
+			attack: 'Front – offset, right grab to right shoulder'
+		},
+		'3rd Brown #14 - Twist of Fate': {
+			name: 'Twist of Fate',
+			sequence: '3rd Brown #14',
+			video: 'https://player.vimeo.com/video/511994981',
+			attack: 'Front – two-hand push'
+		},
+		'3rd Brown #15 - Gift of Destiny': {
+			name: 'Gift of Destiny',
+			sequence: '3rd Brown #15',
+			video: 'https://player.vimeo.com/video/511995231',
+			attack: 'Front – handshake'
+		},
+		'3rd Brown #16 - Blinding Sacrifice': {
+			name: 'Blinding Sacrifice',
+			sequence: '3rd Brown #16',
+			video: 'https://player.vimeo.com/video/511995452',
+			attack: 'Front – two-hand, shoulder grab'
+		},
+		'3rd Brown #17 - Circle of Doom': {
+			name: 'Circle of Doom',
+			sequence: '3rd Brown #17',
+			video: 'https://player.vimeo.com/video/511995869',
+			attack: 'Front – right, straight kick'
+		},
+		'3rd Brown #18 - Squatting Sacrifice': {
+			name: 'Squatting Sacrifice',
+			sequence: '3rd Brown #18',
+			video: 'https://player.vimeo.com/video/511996055',
+			attack: 'Rear – bear-hug — arms free'
+		},
+		'3rd Brown #19 - Desperate Falcons': {
+			name: 'Desperate Falcons',
+			sequence: '3rd Brown #19',
+			video: 'https://player.vimeo.com/video/511996372',
+			attack: 'Front – two-hand grabs to both wrists'
+		},
+		'3rd Brown #20 - Broken Ram': {
+			name: 'Broken Ram',
+			sequence: '3rd Brown #20',
+			video: 'https://player.vimeo.com/video/511996637',
+			attack: 'Front – tackle with opponent’s arms wide'
+		},
+		'2nd Brown #1 - Leap From Danger': {
+			name: 'Leap From Danger',
+			sequence: '2nd Brown #1',
+			video: 'https://player.vimeo.com/video/511972714',
+			attack: 'Rear – two-hand push'
+		},
+		'2nd Brown #2 - Circles of Protection': {
+			name: 'Circles of Protection',
+			sequence: '2nd Brown #2',
+			video: 'https://player.vimeo.com/video/511972948',
+			attack: 'Front – right, step-through, overhead punch'
+		},
+		'2nd Brown #3 - Rotating Destruction': {
+			name: 'Rotating Destruction',
+			sequence: '2nd Brown #3',
+			video: 'https://player.vimeo.com/video/511973248',
+			attack: 'Front – right, thrust and left, spinning, back kic'
+		},
+		'2nd Brown #4 - Broken Gift': {
+			name: 'Broken Gift',
+			sequence: '2nd Brown #4',
+			video: 'https://player.vimeo.com/video/511973517',
+			attack: 'Front – right handshake'
+		},
+		'2nd Brown #5 - Escape From Death': {
+			name: 'Escape From Death',
+			sequence: '2nd Brown #5',
+			video: 'https://player.vimeo.com/video/511973745',
+			attack: 'Rear – right-arm choke'
+		},
+		'2nd Brown #6 - Capturing the Storm': {
+			name: 'Capturing the Storm',
+			sequence: '2nd Brown #6',
+			video: 'https://player.vimeo.com/video/511974045',
+			attack: 'Front – right, step-through, overhead club'
+		},
+		'2nd Brown #7 - Twirling Sacrifice': {
+			name: 'Twirling Sacrifice',
+			sequence: '2nd Brown #7',
+			video: 'https://player.vimeo.com/video/511974349',
+			attack: 'Rear – full nelson'
+		},
+		'2nd Brown #8 - Kneel of Compulsion': {
+			name: 'Kneel of Compulsion',
+			sequence: '2nd Brown #8',
+			video: 'https://player.vimeo.com/video/511982290',
+			attack: 'Right-flank – right, step-through punch'
+		},
+		'2nd Brown #9 - Menacing Twirl': {
+			name: 'Menacing Twirl',
+			sequence: '2nd Brown #9',
+			video: 'https://player.vimeo.com/video/511982532',
+			attack: 'Rear – left-hand, belt grab'
+		},
+		'2nd Brown #10 - Intercepting the Ram': {
+			name: 'Intercepting the Ram',
+			sequence: '2nd Brown #10',
+			video: 'https://player.vimeo.com/video/511982762',
+			attack: 'Front – tackle'
+		},
+		'2nd Brown #11 - Back Breaker': {
+			name: 'Back Breaker',
+			sequence: '2nd Brown #11',
+			video: 'https://player.vimeo.com/video/511983088',
+			attack: 'Right-flank – right, step-through punch'
+		},
+		'2nd Brown #12 - Cross of Death': {
+			name: 'Cross of Death',
+			sequence: '2nd Brown #12',
+			video: 'https://player.vimeo.com/video/511983432',
+			attack: 'Front – two-hand, cross-choke (gi choke)'
+		},
+		'2nd Brown #13 - Securing the Storm': {
+			name: 'Securing the Storm',
+			sequence: '2nd Brown #13',
+			video: 'https://player.vimeo.com/video/511983704',
+			attack: 'Front – right, step-through, roundhouse club'
+		},
+		'2nd Brown #14 - Deceptive Panther': {
+			name: 'Deceptive Panther',
+			sequence: '2nd Brown #14',
+			video: 'https://player.vimeo.com/video/511983960',
+			attack: 'Front – right, snap kick (low) & right, roundhouse'
+		},
+		'2nd Brown #15 - Heavenly Ascent': {
+			name: 'Heavenly Ascent',
+			sequence: '2nd Brown #15',
+			video: 'https://player.vimeo.com/video/511984237',
+			attack: 'Front – two-hand choke, arms straight'
+		},
+		'2nd Brown #16 - Falling Falcon': {
+			name: 'Falling Falcon',
+			sequence: '2nd Brown #16',
+			video: 'https://player.vimeo.com/video/511984428',
+			attack: 'Front – right, direct, lapel grab'
+		},
+		'2nd Brown #17 - Taming the Mace': {
+			name: 'Taming the Mace',
+			sequence: '2nd Brown #17',
+			video: 'https://player.vimeo.com/video/511984838',
+			attack: 'Front – right, step-through punch — with a wall be'
+		},
+		'2nd Brown #18 - Defensive Cross': {
+			name: 'Defensive Cross',
+			sequence: '2nd Brown #18',
+			video: 'https://player.vimeo.com/video/511985034',
+			attack: 'Front – right snap kick'
+		},
+		'2nd Brown #19 - Bowing to Buddha': {
+			name: 'Bowing to Buddha',
+			sequence: '2nd Brown #19',
+			video: 'https://player.vimeo.com/video/511985334',
+			attack: 'Front – right, roundhouse kick'
+		},
+		'2nd Brown #20 - Glancing Wing': {
+			name: 'Glancing Wing',
+			sequence: '2nd Brown #20',
+			video: 'https://player.vimeo.com/video/511985824',
+			attack: 'Front – left, uppercut punch'
+		},
+		'1st Brown #1 - Circling Fans': {
+			name: 'Circling Fans',
+			sequence: '1st Brown #1',
+			video: 'https://player.vimeo.com/video/512067082',
+			attack: 'Front – left & right punch combination'
+		},
+		'1st Brown #2 - Dance of Darkness': {
+			name: 'Dance of Darkness',
+			sequence: '1st Brown #2',
+			video: 'https://player.vimeo.com/video/512067342',
+			attack: 'Front – right kick & right punch combination'
+		},
+		'1st Brown #3 - Falcons of Force': {
+			name: 'Falcons of Force',
+			sequence: '1st Brown #3',
+			video: 'https://player.vimeo.com/video/512067655',
+			attack: 'Right and left flanks – left & right shoulder grab'
+		},
+		'1st Brown #4 - Bear and the Ram': {
+			name: 'Bear and the Ram',
+			sequence: '1st Brown #4',
+			video: 'https://player.vimeo.com/video/512067870',
+			attack: 'Front – right punch & rear, bear hug (arms free) —'
+		},
+		'1st Brown #5 - Clipping the Storm': {
+			name: 'Clipping the Storm',
+			sequence: '1st Brown #5',
+			video: 'https://player.vimeo.com/video/512068111',
+			attack: 'Front – right, thrusting club'
+		},
+		'1st Brown #6 - Protecting Fans': {
+			name: 'Protecting Fans',
+			sequence: '1st Brown #6',
+			video: 'https://player.vimeo.com/video/512068258',
+			attack: 'Front – left & right punch combination'
+		},
+		'1st Brown #7 - Grasping Eagles': {
+			name: 'Grasping Eagles',
+			sequence: '1st Brown #7',
+			video: 'https://player.vimeo.com/video/512068488',
+			attack: 'Front –  right, lapel grab / rear – right, shoulde'
+		},
+		'1st Brown #8 - Parting of the Snakes': {
+			name: 'Parting of the Snakes',
+			sequence: '1st Brown #8',
+			video: 'https://player.vimeo.com/video/512068635',
+			attack: 'Front – right punch & rear attempt — two men'
+		},
+		'1st Brown #9 - Thrust into Darkness': {
+			name: 'Thrust into Darkness',
+			sequence: '1st Brown #9',
+			video: 'https://player.vimeo.com/video/512068890',
+			attack: 'Rear – right, step-through punch'
+		},
+		'1st Brown #10 - Leap of Death': {
+			name: 'Leap of Death',
+			sequence: '1st Brown #10',
+			video: 'https://player.vimeo.com/video/512069164',
+			attack: 'Front – right, step-through, straight punch'
+		},
+		'1st Brown #11 - Raining Lance': {
+			name: 'Raining Lance',
+			sequence: '1st Brown #11',
+			video: 'https://player.vimeo.com/video/512069557',
+			attack: 'Front – right, step-through, overhead, knife attac'
+		},
+		'1st Brown #12 - Unfurling Crane': {
+			name: 'Unfurling Crane',
+			sequence: '1st Brown #12',
+			video: 'https://player.vimeo.com/video/512069842',
+			attack: 'Front – left & right punch'
+		},
+		'1st Brown #13 - Fatal Cross': {
+			name: 'Fatal Cross',
+			sequence: '1st Brown #13',
+			video: 'https://player.vimeo.com/video/512070065',
+			attack: 'Front – two-hand, attempted, low grab or push'
+		},
+		'1st Brown #14 - Circling Windmills': {
+			name: 'Circling Windmills',
+			sequence: '1st Brown #14',
+			video: 'https://player.vimeo.com/video/512070274',
+			attack: 'Front – two-hand push followed by right-hand punch'
+		},
+		'1st Brown #15 - Reversing Circles': {
+			name: 'Reversing Circles',
+			sequence: '1st Brown #15',
+			video: 'https://player.vimeo.com/video/512070546',
+			attack: 'Front – left, roundhouse kick & left punch combina'
+		},
+		'1st Brown #16 - Courting the Tiger': {
+			name: 'Courting the Tiger',
+			sequence: '1st Brown #16',
+			video: 'https://player.vimeo.com/video/512070796',
+			attack: 'Right and left flanks – left & right arm & shoulde'
+		},
+		'1st Brown #17 - Gathering of the Snakes': {
+			name: 'Gathering of the Snakes',
+			sequence: '1st Brown #17',
+			video: 'https://player.vimeo.com/video/512071032',
+			attack: 'Front – left punch / rear – right punch — two men'
+		},
+		'1st Brown #18 - Destructive Fans': {
+			name: 'Destructive Fans',
+			sequence: '1st Brown #18',
+			video: 'https://player.vimeo.com/video/512071265',
+			attack: 'Left flank – right, step-through punch'
+		},
+		'1st Brown #19 - Unwinding Pendulum': {
+			name: 'Unwinding Pendulum',
+			sequence: '1st Brown #19',
+			video: 'https://player.vimeo.com/video/512071480',
+			attack: 'Front – right kick & right punch combination'
+		},
+		'1st Brown #20 - Glancing Lance': {
+			name: 'Glancing Lance',
+			sequence: '1st Brown #20',
+			video: 'https://player.vimeo.com/video/512071741',
+			attack: 'Front – right, shuffle, knife thrust'
+		},
+		'1st Black #1 - Destructive Kneel': {
+			name: 'Destructive Kneel',
+			sequence: '1st Black #1',
+			video: 'https://player.vimeo.com/video/510652332',
+			attack: 'Front – right, step-through punch'
+		},
+		'1st Black #2 - Entwined Maces': {
+			name: 'Entwined Maces',
+			sequence: '1st Black #2',
+			video: 'https://player.vimeo.com/video/510652837',
+			attack: 'Front – left & right punch combination'
+		},
+		'1st Black #3 - Marriage of the Rams': {
+			name: 'Marriage of the Rams',
+			sequence: '1st Black #3',
+			video: 'https://player.vimeo.com/video/510653403',
+			attack: 'Right and left flanks – left & right shoulder grab'
+		},
+		'1st Black #4 - The Ram and the Eagle': {
+			name: 'The Ram and the Eagle',
+			sequence: '1st Black #4',
+			video: 'https://player.vimeo.com/video/510653926',
+			attack: 'Front – right punch / rear – left-hand, collar gra'
+		},
+		'1st Black #5 - Escape from the Storm': {
+			name: 'Escape from the Storm',
+			sequence: '1st Black #5',
+			video: 'https://player.vimeo.com/video/510654478',
+			attack: 'Right flank – right, overhead, club attack'
+		},
+		'1st Black #6 - Thrusting Lance': {
+			name: 'Thrusting Lance',
+			sequence: '1st Black #6',
+			video: 'https://player.vimeo.com/video/510655186',
+			attack: 'Front – right, step-through, low, knife thrust'
+		},
+		'1st Black #7 - Capturing the Rod': {
+			name: 'Capturing the Rod',
+			sequence: '1st Black #7',
+			video: 'https://player.vimeo.com/video/510655759',
+			attack: 'Front – right pistol — against the chest'
+		},
+		'1st Black #8 - Prance of the Tiger': {
+			name: 'Prance of the Tiger',
+			sequence: '1st Black #8',
+			video: 'https://player.vimeo.com/video/510656298',
+			attack: 'Right flank – right, step-through, uppercut punch'
+		},
+		'1st Black #9 - Fatal Deviation': {
+			name: 'Fatal Deviation',
+			sequence: '1st Black #9',
+			video: 'https://player.vimeo.com/video/510656912',
+			attack: 'Front – right & left punch combination'
+		},
+		'1st Black #10 - Snakes of Wisdom': {
+			name: 'Snakes of Wisdom',
+			sequence: '1st Black #10',
+			video: 'https://player.vimeo.com/video/510657342',
+			attack: 'Right and left flanks – left & right shoulder grab'
+		},
+		'1st Black #11 - Reprimanding the Bears': {
+			name: 'Reprimanding the Bears',
+			sequence: '1st Black #11',
+			video: 'https://player.vimeo.com/video/510657864',
+			attack: 'Front – right punch / rear – bear hug — arms pinne'
+		},
+		'1st Black #12 - Circling the Storm': {
+			name: 'Circling the Storm',
+			sequence: '1st Black #12',
+			video: 'https://player.vimeo.com/video/510658342',
+			attack: 'Front – right club thrust'
+		},
+		'1st Black #13 - Entwined Lance': {
+			name: 'Entwined Lance',
+			sequence: '1st Black #13',
+			video: 'https://player.vimeo.com/video/510658928',
+			attack: 'Front – right, step-through, low, knife thrust'
+		},
+		'1st Black #14 - Broken Rod': {
+			name: 'Broken Rod',
+			sequence: '1st Black #14',
+			video: 'https://player.vimeo.com/video/510659387',
+			attack: 'Right – rear-hand pistol — against your back'
+		},
+		'1st Black #15 - Twirling Hammers': {
+			name: 'Twirling Hammers',
+			sequence: '1st Black #15',
+			video: 'https://player.vimeo.com/video/510660005',
+			attack: 'Front – left, step-through punch'
+		},
+		'1st Black #16 - Piercing Lance': {
+			name: 'Piercing Lance',
+			sequence: '1st Black #16',
+			video: 'https://player.vimeo.com/video/510660569',
+			attack: 'Front – right, low, knife thrust — while arms are '
+		},
+		'1st Black #17 - Unfolding the Dark': {
+			name: 'Unfolding the Dark',
+			sequence: '1st Black #17',
+			video: 'https://player.vimeo.com/video/510661217',
+			attack: 'Right, rear flank – left, step-through punch'
+		},
+		'1st Black #18 - Defying the Rod': {
+			name: 'Defying the Rod',
+			sequence: '1st Black #18',
+			video: 'https://player.vimeo.com/video/510661736',
+			attack: 'Front – right pistol'
+		},
+		'1st Black #19 - Escape from Darkness': {
+			name: 'Escape from Darkness',
+			sequence: '1st Black #19',
+			video: 'https://player.vimeo.com/video/510662331',
+			attack: 'Left, rear flank – right, step-through punch'
+		},
+		'1st Black #20 - Twisted Rod': {
+			name: 'Twisted Rod',
+			sequence: '1st Black #20',
+			video: 'https://player.vimeo.com/video/510767898',
+			attack: 'Front – right pistol'
+		}
+	};
+
+	let body = [];
+
+	for (const data of Object.values(newContent)) {
+		body.push({
+			name: data.name,
+			attack: data.attack,
+			startIn: 'Natural stance',
+			class: 'West LA',
+			learnedDate: null,
+			notes: []
+		});
+	}
+
+	return {
+		body
+	};
+
 	return {
 		body: [
 			{
