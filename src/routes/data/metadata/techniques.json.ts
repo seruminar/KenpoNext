@@ -17,6 +17,14 @@ export const get: RequestHandler<
 				name: 'Attack',
 				filterable: true
 			},
+			belt: {
+				name: 'Belt',
+				filterable: true
+			},
+			sequence: {
+				name: 'Belt sequence',
+				filterable: false
+			},
 			startIn: {
 				name: 'Start in',
 				filterable: true

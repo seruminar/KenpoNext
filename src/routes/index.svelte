@@ -135,6 +135,12 @@
 							<span>{technique.attack}</span>
 						</div>
 						<div class="item cell">
+							<span>{technique.belt}</span>
+						</div>
+						<div class="item cell">
+							<span>{technique.sequence}</span>
+						</div>
+						<div class="item cell">
 							<span>{technique.startIn}</span>
 						</div>
 						<div class="item cell">
