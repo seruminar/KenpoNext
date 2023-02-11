@@ -41,8 +41,9 @@
 		techniquesMetadata = await techniquesMetadataResponse.json();
 
 		for (const [filterKey, techniquesMetadataEntry] of Object.entries(techniquesMetadata)) {
-			allHeaderKeys.push(filterKey);
-
+			if (techniquesMetadataEntry.header) {
+				allHeaderKeys.push(filterKey);
+			}
 			if (techniquesMetadataEntry.filterable) {
 				filterKeys.push(filterKey);
 
