@@ -44,6 +44,7 @@
 			if (techniquesMetadataEntry.header) {
 				allHeaderKeys.push(filterKey);
 			}
+
 			if (techniquesMetadataEntry.filterable) {
 				filterKeys.push(filterKey);
 
@@ -123,7 +124,7 @@
 			{#each allHeaderKeys as headerKey}
 				<div class="item cell">
 					<h2>{techniquesMetadata[headerKey].name}</h2>
-					{#if filterKeys.indexOf(headerKey) > 0}
+					{#if filterKeys.indexOf(headerKey) > -1}
 						<Filter bind:value={filters[headerKey]} options={filterOptions[headerKey]} />
 					{/if}
 				</div>
