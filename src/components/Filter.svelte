@@ -80,6 +80,11 @@
 	.root {
 		width: 100%;
 
+		input[type='text'] {
+			width: calc(100% - 1em);
+			margin: 0 1em 0 0;
+		}
+
 		.floatContext {
 			position: relative;
 

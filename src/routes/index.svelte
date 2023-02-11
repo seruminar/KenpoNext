@@ -22,6 +22,7 @@
 	let sorted: boolean = false;
 
 	let techniquesMetadata: MetadataResponse<Technique>;
+	let allHeaderKeys: string[] = [];
 	let filterKeys: string[] = [];
 
 	$: filtersStore = localStorage<{ [key: string]: string[] }>(LocalStorageKeys.Filters, {});
@@ -40,8 +41,11 @@
 		techniquesMetadata = await techniquesMetadataResponse.json();
 
 		for (const [filterKey, techniquesMetadataEntry] of Object.entries(techniquesMetadata)) {
+			allHeaderKeys.push(filterKey);
+
 			if (techniquesMetadataEntry.filterable) {
 				filterKeys.push(filterKey);
+
 				filterOptions[filterKey] = sortBy(
 					uniq(techniques.map((technique) => technique[filterKey]))
 				);
@@ -115,10 +119,12 @@
 <div class="group column">
 	<div class="group row">
 		{#if techniques.length > 0}
-			{#each filterKeys as filterKey}
+			{#each allHeaderKeys as headerKey}
 				<div class="item cell">
-					<h2>{techniquesMetadata[filterKey].name}</h2>
-					<Filter bind:value={filters[filterKey]} options={filterOptions[filterKey]} />
+					<h2>{techniquesMetadata[headerKey].name}</h2>
+					{#if filterKeys.indexOf(headerKey) > 0}
+						<Filter bind:value={filters[headerKey]} options={filterOptions[headerKey]} />
+					{/if}
 				</div>
 			{/each}
 		{/if}
@@ -187,7 +193,7 @@
 	.row {
 		.cell {
 			padding: 0 0.5em 0 0;
-			width: 25%;
+			width: calc(100% / 6);
 		}
 
 		.notes {
