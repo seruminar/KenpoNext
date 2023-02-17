@@ -46,7 +46,7 @@
 		height: 100%;
 
 		@include respond-above(md) {
-			max-width: 60em;
+			max-width: 80em;
 			margin: auto;
 		}
 	}

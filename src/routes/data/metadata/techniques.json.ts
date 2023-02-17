@@ -1,12 +1,11 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestEvent, EndpointOutput } from '@sveltejs/kit';
 import type { Technique } from '../../../types/data/objectTypes/Technique';
 import type { MetadataResponse } from '../../../types/data/MetadataResponse';
+import type { MaybePromise } from '@sveltejs/kit/types/helper';
 
-export const get: RequestHandler<
-	Record<string, string>,
-	Record<string, string>,
-	MetadataResponse<Technique>
-> = async () => {
+export function get(
+	event: RequestEvent
+): MaybePromise<EndpointOutput<MetadataResponse<Technique>>> {
 	return {
 		body: {
 			name: {
@@ -16,7 +15,7 @@ export const get: RequestHandler<
 			},
 			attack: {
 				name: 'Attack',
-				header: true,
+				header: false,
 				filterable: true
 			},
 			belt: {
@@ -25,13 +24,13 @@ export const get: RequestHandler<
 				filterable: true
 			},
 			sequence: {
-				name: 'Belt sequence',
+				name: '#',
 				header: true,
 				filterable: false
 			},
 			startIn: {
 				name: 'Start in',
-				header: true,
+				header: false,
 				filterable: true
 			},
 			class: {
@@ -44,6 +43,11 @@ export const get: RequestHandler<
 				header: false,
 				filterable: false
 			},
+			video: {
+				name: 'Video',
+				header: false,
+				filterable: false
+			},
 			notes: {
 				name: 'Notes',
 				header: false,
@@ -51,4 +55,4 @@ export const get: RequestHandler<
 			}
 		}
 	};
-};
+}

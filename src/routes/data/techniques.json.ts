@@ -1,25 +1,9 @@
-import type { RequestHandler } from '@sveltejs/kit/';
+import type { RequestEvent, EndpointOutput } from '@sveltejs/kit';
 import type { DataResponse } from '../../types/data/DataResponse';
 import type { Technique } from '../../types/data/objectTypes/Technique';
+import type { MaybePromise } from '@sveltejs/kit/types/helper';
 
-/*
-
-{
-  name: '',
-  attack: '',
-  startIn: 'Natural stance',
-  class: 'West LA',
-  learnedDate: new Date('3/8/22'),
-  notes: [
-    '',
-    '',
-    ''
-  ]
-},
-
-*/
-
-export const get: RequestHandler<DataResponse<Technique>> = async () => {
+export function get(event: RequestEvent): MaybePromise<EndpointOutput<DataResponse<Technique>>> {
 	let newContent = {
 		'Yellow #01 - Delayed Sword': {
 			name: 'Delayed Sword',
@@ -1101,7 +1085,7 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 		}
 	};
 
-	let body = [];
+	let body: Technique[] = [];
 
 	for (const data of Object.values(newContent)) {
 		body.push({
@@ -1116,6 +1100,10 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 	return {
 		body
 	};
+}
+
+/**
+ * 
 
 	return {
 		body: [
@@ -2599,4 +2587,6 @@ export const get: RequestHandler<DataResponse<Technique>> = async () => {
 			}
 		]
 	};
-};
+ * 
+ * 
+ */

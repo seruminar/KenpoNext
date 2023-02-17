@@ -106,23 +106,22 @@
 <div class="group header">
 	<h1>Kenpo Karate</h1>
 	<div class="item" />
-	<button
-		on:click={() => {
-			random = !random;
-			sorted = false;
-		}}
-		>Random {#if random}
-			on
-		{:else}
-			off
-		{/if}</button
-	>
+	<label class="group">
+		<p>Random</p>
+		<button
+			class={random ? 'on' : 'off'}
+			on:click={() => {
+				random = !random;
+				sorted = false;
+			}}
+		/>
+	</label>
 </div>
 <div class="group column">
 	<div class="group row">
 		{#if techniques.length > 0}
 			{#each allHeaderKeys as headerKey}
-				<div class="item cell">
+				<div class={`item cell ${headerKey}`}>
 					<h2>{techniquesMetadata[headerKey].name}</h2>
 					{#if filterKeys.indexOf(headerKey) > -1}
 						<Filter bind:value={filters[headerKey]} options={filterOptions[headerKey]} />
@@ -136,26 +135,35 @@
 			<div class="item">
 				<ExpandableRow>
 					<div class="group">
-						<div class="item cell">
+						<div class="item cell name">
 							<strong>{technique.name}</strong>
 						</div>
-						<div class="item cell">
-							<span>{technique.attack}</span>
-						</div>
-						<div class="item cell">
+						<div class="item cell belt">
 							<span>{technique.belt}</span>
 						</div>
-						<div class="item cell">
+						<div class="item cell sequence">
 							<span>{technique.sequence}</span>
 						</div>
-						<div class="item cell">
-							<span>{technique.startIn}</span>
-						</div>
-						<div class="item cell">
+						<div class="item cell class">
 							<span>{technique.class}</span>
 						</div>
 					</div>
 					<div class="group" slot="expanded">
+						{#if technique.learnedDate !== null}
+							<div class="item notes">
+								{new Date(technique.learnedDate).toDateString()}
+							</div>
+						{/if}
+						{#if technique.attack !== null}
+							<div class="item notes">
+								{technique.attack}
+							</div>
+						{/if}
+						{#if technique.startIn !== null}
+							<div class="item notes">
+								{technique.startIn}
+							</div>
+						{/if}
 						{#if technique.notes.length > 0}
 							<div class="item notes">
 								<ol>
@@ -163,11 +171,6 @@
 										<li>{note}</li>
 									{/each}
 								</ol>
-							</div>
-						{/if}
-						{#if technique.learnedDate !== null}
-							<div class="item notes">
-								{new Date(technique.learnedDate).toDateString()}
 							</div>
 						{/if}
 					</div>
@@ -184,6 +187,39 @@
 		h1 {
 			font-size: 2em;
 		}
+
+		label {
+			align-items: center;
+
+			button {
+				position: relative;
+				width: 5em;
+				height: 2.5em;
+				padding: 0;
+				margin: 0 0 0 0.5em;
+				background: grey;
+				border: none;
+				border-radius: 0.8em;
+
+				&:before {
+					position: absolute;
+					content: '';
+					height: 2em;
+					width: 2em;
+					left: 0.25em;
+					bottom: 0.25em;
+					border-radius: 0.8em;
+					background-color: white;
+					transition: 0.2s;
+					transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+				}
+
+				&.on:before {
+					background-color: greenyellow;
+					transform: translateX(2.5em);
+				}
+			}
+		}
 	}
 
 	h2 {
@@ -194,8 +230,30 @@
 
 	.row {
 		.cell {
-			padding: 0 0.5em 0 0;
-			width: calc(100% / 6);
+			padding: 0.2em;
+			word-break: break-all;
+
+			&.name {
+				strong {
+					font-size: 2em;
+				}
+			}
+
+			&.belt {
+				flex: 0.4;
+			}
+
+			&.sequence {
+				flex: 0.2;
+			}
+
+			&.startIn {
+				flex: 0.6;
+			}
+
+			&.class {
+				flex: 0.4;
+			}
 		}
 
 		.notes {
