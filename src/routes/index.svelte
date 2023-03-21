@@ -130,7 +130,7 @@
 			{/each}
 		{/if}
 	</div>
-	{#each filteredTechniques as technique}
+	{#each filteredTechniques as technique (technique.name)}
 		<div class="group row">
 			<div class="item">
 				<ExpandableRow>
