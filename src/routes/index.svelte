@@ -34,7 +34,7 @@
 	onMount(async () => {
 		const techniquesResponse = await fetch('data/techniques.json');
 
-		techniques = sortBy(await techniquesResponse.json(), ['name']);
+		techniques = sortBy(await techniquesResponse.json(), ['belt', 'sequence', 'name']);
 
 		const techniquesMetadataResponse = await fetch('data/metadata/techniques.json');
 
